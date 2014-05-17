@@ -1,0 +1,54 @@
+//////////////////////////////  TODO /////////////////////////////////////////////////////
+Limitar lenguajes a castellano y catalan  (mirar en config/initializers/spree.rb)  BIEn!!!
+
+pero ...
+
+taxonomies = [
+  { :name => I18n.t(:categorias) },
+  { :name => I18n.t(:proveedor) }
+] NO TIENE SENTIDO Hay que crear con ruby taxonomies translations entries en la database. Como? Asi:
+
+taxonomies = [
+  { :name => "categorias" },
+  { :name => "proveedor" }
+] (eliminar codigo en locales ca.yml, es.yml, ...)
+
+y Spree::Taxonomies.find_by(:name => "categorias" ) y crear traduccion en el seed.rb ???
+
+
+
+Cucumber
+Escribir test para comprobar que solo se carga mi seed data de db/default/*.rb
+Escribir test para comprobar que se cambia el locale: http://www.railway.at/articles/2009/09/12/using-cucumber-to-test-a-multilingual-app/
+
+(Use sqlitebrowser to inspect development.sqlite3 database and create my db/seed.rb with i.e. first_or_create )
+Spree has several options for loading seed data,
+but perhaps the easiest to use here is to put ruby files in site/db/default/.
+These files are processed when rake db:seed is called, and will be processed in the order of the migration timestamps.
+
+See spree_sample files to see dependencies between objects
+Your ruby script can use one of the XLS or CSV format reading libraries to read an external file
+
+Migrate data to database for default values:
+http://guides.spreecommerce.com/developer/migration.html
+
+Seguir con test:
+
+run with:
+    1. rake
+    2. cucumber features
+    3. rspec
+
+1. Anyadir test para comprobar que: (Usar capybara or RSPEC or cucumber)
+
+    - logo sobre escrito
+    - Footer Power by sobre escrito
+
+//////////////////////////////  HELPERS /////////////////////////////////////////////////////
+
+Restart database:
+rake db:drop
+rake db:migrate
+rake db:seed
+
+Cucumber y RSpec fallan si reseteo la database (rake db:drop). Para arreglarlo (rake db:migrate RAILS_ENV=test)

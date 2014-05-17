@@ -1,0 +1,10 @@
+cucumber
+    - I personally use tag @ignore to mark scenarios not ready.
+      Then, in order to skip them, use:
+      cucumber --tags ~@ignore
+
+
+rails console
+    - Spree::Variant.all.each {|p| ap p }
+    - Spree::Taxonomy.all.each {|p| ap p }
+    - Spree::Product.all.each {|p| ap p }
