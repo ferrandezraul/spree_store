@@ -1,8 +1,20 @@
-taxonomies = [
-  { :name => I18n.t(:categorias) },
-  { :name => I18n.t(:proveedor) }
+catalan_translations = YAML.load_file('config/locales/ca.yml')
+spanish_translations = YAML.load_file('config/locales/es.yml')
+
+taxonomy_names = [
+  { :name => 'categorias' },
+  { :name => 'proveedores' }
 ]
 
-taxonomies.each do |taxonomy_attrs|
-  Spree::Taxonomy.create!(taxonomy_attrs)
-end
+
+
+#taxonomy_names.each do |name|
+  taxonomy = Spree::Taxonomy.create!({ :name => 'categorias' })
+
+  Spree::Taxonomy::Translation.find_or_create_by!( :spree_taxonomy_id => taxonomy.id, :locale => 'ca', :name => 'Categories')
+  Spree::Taxonomy::Translation.find_or_create_by!( :spree_taxonomy_id => taxonomy.id, :locale => 'es', :name => 'Categorias')
+  #Spree::Taxonomy::Translation.find_or_create_by!( :spree_taxonomy_id => taxonomy.id, :locale => 'ca', :name => (catalan_translations['ca'][name]) )
+  #Spree::Taxonomy::Translation.find_or_create_by!( :spree_taxonomy_id => taxonomy.id, :locale => 'es', :name => (spanish_translations['ca'][name']) )
+
+#end
+
