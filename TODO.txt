@@ -1,7 +1,7 @@
 //////////////////////////////  TODO /////////////////////////////////////////////////////
 Limitar lenguajes a castellano y catalan  (mirar en config/initializers/spree.rb)  BIEn!!!
 
-pero ...  Acabar el tema localizar taxonomies en db/default/taxonomies.rb
+pero ...  ahora que esta acabado escribir test en cucumber or rspec!!!
 
 taxonomies = [
   { :name => I18n.t(:categorias) },
