@@ -1,11 +1,12 @@
 ca:
-  power_by: Fet per Raul Ferrandez
-  categorias: Categories
-  proveedor: Proveïdor
-  spree:
-  # Taxonomies de Spree definidas en mi db/default
+  taxonomies:
+    #Taxonomies de Spree definidas en mi db/default
     categorias: Categories
     proveedor: Proveïdor
+
+  power_by: Fet per Raul Ferrandez
+
+  spree:
     i18n:
       # Overwrite from spree-i18n the language name displayed
       this_file_language: Català

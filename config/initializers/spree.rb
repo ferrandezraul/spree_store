@@ -16,7 +16,7 @@ Spree.user_class = "Spree::User"
 # Overwrite logo from /home/raul/.rvm/gems/ruby-2.1.1/bundler/gems/spree-3141905d7ca6/core/app/models/spree/app_configuration.rb
 Spree::Config.set( logo: 'head_logo.jpg' )
 
-SpreeI18n::Config.available_locales = [:en, :es, :ca] # displayed on translation forms   (Publicas + privadas en desarrollo)
+SpreeI18n::Config.available_locales = [:es, :ca] # displayed on translation forms   (Publicas + privadas en desarrollo)
 SpreeI18n::Config.supported_locales = [:es, :ca]      # displayed on frontend select box (Publicas cliente)
 
 # Examples

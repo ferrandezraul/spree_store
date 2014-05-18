@@ -38,7 +38,7 @@ module MyStore
 
     config.i18n.available_locales= [:es, :ca]
 
-    config.i18n.default_locale = :es
+    config.i18n.default_locale = :ca
 
   end
 end

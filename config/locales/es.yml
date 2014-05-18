@@ -1,8 +1,7 @@
 es:
-  power_by: Hecho por Raul Ferrandez
-  categorias: Categorias
-  proveedor: Proveedor
-  # Taxonomies de Spree definidas en mi db/default
-  spree:
+  taxonomies:
+    #Taxonomies de Spree definidas en mi db/default
     categorias: Categorias
     proveedor: Proveedor
+
+  power_by: Hecho por Raul Ferrandez
