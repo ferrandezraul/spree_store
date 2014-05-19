@@ -220,31 +220,45 @@ taxons = [
 
 # First create parent Taxons
 taxons.each do |key, value|
-  if key == :attr
-    key.each do |attribute, attr_value|
-      if attribute == :parent
-        attr_value = Spree::Taxon.find_by_name!(attr_value)
-        Spree::Taxon.create!(attr_value)
-      end
+  puts "TAXON ITERATION"
+  puts "KEY = #{key}"
+  puts "VALUE = #{value}"
+  if key[:attr]
+    puts "KEY[:attr] found!!!!"
+    puts "KEY[:attr] = #{key[:attr]}"
 
+    if key[:attr][:parent]
+      puts "key[:attr][:parent] found!!!!"
+      puts "key[:attr][:parent] = #{key[:attr][:parent]}"
+      taxon_found = Spree::Taxon.find_by_name!(key[:attr][:parent])
+      puts "Spree::Taxon with #{key[:attr][:parent]} found!!!"
+      ap taxon_found
+      sub_taxon=Spree::Taxon.create!(:name => key[:attr][:name],
+                           :parent_id => taxon_found.id )
+      puts "Created Spree::Taxon!!!"
+      ap sub_taxon
     end
+
+
   end
 end
 
 
-
 taxons.each do |key, value|
-  if key == :translations
-    taxon = Spree::Taxon.find_by_name!(value[:name])
-    value.each do |language, translated_name|
-      Spree::Taxon::Translation.find_or_create_by!(:spree_taxon_id => taxon.id,
-                                                   :locale => 'ca',
-                                                   :name => translation[:catalan])
-
-      Spree::Taxon::Translation.find_or_create_by!(:spree_taxon_id => taxon.id,
-                                                   :locale => 'es',
-                                                   :name => translation[:spanish])
-
+  if key[:translations]
+    puts "key[:translations]= #{key[:translations]}"
+    taxon = Spree::Taxon.find_by_name!(key[:translations][:name])
+    if taxon
+      puts "Taxon found!"
+      ap taxon
     end
+
+    Spree::Taxon::Translation.find_or_create_by!(:spree_taxon_id => taxon.id,
+                                                 :locale => 'ca',
+                                                 :name => key[:translations][:catalan])
+
+    Spree::Taxon::Translation.find_or_create_by!(:spree_taxon_id => taxon.id,
+                                                 :locale => 'es',
+                                                 :name => key[:translations][:spanish])
   end
 end
