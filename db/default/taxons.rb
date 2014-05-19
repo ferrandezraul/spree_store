@@ -35,18 +35,6 @@ proveiders = Spree::Taxonomy.find_by_name!(taxonomy_proveider)
 taxons = [
   {
     :attr => {
-        :name => "Categories",
-        :taxonomy => categories,
-        :position => 0
-    },
-    :translations => {
-      :name => "Categories",
-      :catalan => (catalan_translations['ca']['taxonomies']['categorias']),
-      :spanish =>  (spanish_translations['es']['taxonomies']['categorias'])
-    }
-  },
-  {
-    :attr => {
       :name => "Carn de Xai",
       :taxonomy => categories,
       :parent => "Categories",
@@ -135,17 +123,6 @@ taxons = [
   },
   {
     :attr => {
-      :name => "Proveïdors",
-      :taxonomy => proveiders
-    },
-    :translations => {
-      :name => "Proveïdors",
-      :catalan => (catalan_translations['ca']['taxonomies']['proveedor']),
-      :spanish =>  (spanish_translations['es']['taxonomies']['proveedor'])
-    }
-  },
-  {
-    :attr => {
       :name => "Sot del Palau",
       :taxonomy => proveiders,
       :parent => "Proveïdors"
@@ -218,37 +195,32 @@ taxons = [
   }
 ]
 
-# First create parent Taxons
-taxons.each do |key, value|
 
-  if key[:attr]
+taxons.each do |taxon|
 
-    if key[:attr][:parent]
+  if taxon[:attr]
 
-      taxon_found = Spree::Taxon.find_by_name!(key[:attr][:parent])
+    # Only create taxons that have a parent
+    if taxon[:attr][:parent]
 
-      sub_taxon = Spree::Taxon.create!(:name => key[:attr][:name],
-                                       :parent_id => taxon_found.id,
-                                       :taxonomy_id => taxon_found.taxonomy_id )
+      parent_taxon = Spree::Taxon.find_by_name!(taxon[:attr][:parent])
+
+      sub_taxon = Spree::Taxon.create!(:name => taxon[:attr][:name],
+                                       :parent_id => parent_taxon.id,
+                                       :taxonomy_id => parent_taxon.taxonomy_id )
+
+      if taxon[:translations][:catalan] and taxon[:translations][:spanish]
+
+        Spree::Taxon::Translation.find_or_create_by!(:spree_taxon_id => sub_taxon.id,
+                                                     :locale => 'ca',
+                                                     :name => taxon[:translations][:catalan])
+
+        Spree::Taxon::Translation.find_or_create_by!(:spree_taxon_id => sub_taxon.id,
+                                                     :locale => 'es',
+                                                     :name => taxon[:translations][:spanish])
+      end
 
     end
 
-
-  end
-end
-
-
-taxons.each do |key, value|
-  if key[:translations]
-
-    taxon = Spree::Taxon.find_by_name!(key[:translations][:name])
-
-    Spree::Taxon::Translation.find_or_create_by!(:spree_taxon_id => taxon.id,
-                                                 :locale => 'ca',
-                                                 :name => key[:translations][:catalan])
-
-    Spree::Taxon::Translation.find_or_create_by!(:spree_taxon_id => taxon.id,
-                                                 :locale => 'es',
-                                                 :name => key[:translations][:spanish])
   end
 end
