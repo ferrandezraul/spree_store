@@ -1,21 +1,5 @@
 //////////////////////////////  TODO /////////////////////////////////////////////////////
-Limitar lenguajes a castellano y catalan  (mirar en config/initializers/spree.rb)  BIEn!!!
-
-pero ...  ahora que esta acabado escribir test en cucumber or rspec!!!
-
-taxonomies = [
-  { :name => I18n.t(:categorias) },
-  { :name => I18n.t(:proveedor) }
-] NO TIENE SENTIDO Hay que crear con ruby taxonomies translations entries en la database. Como? Asi:
-
-taxonomies = [
-  { :name => "categorias" },
-  { :name => "proveedor" }
-] (eliminar codigo en locales ca.yml, es.yml, ...)
-
-y Spree::Taxonomies.find_by(:name => "categorias" ) y crear traduccion en el seed.rb ???
-
-
+Crear taxons, hijos de taxonomies (ver sqlite tables) Debug cuurent seed taxon con awesome print.
 
 Cucumber
 Escribir test para comprobar que solo se carga mi seed data de db/default/*.rb
