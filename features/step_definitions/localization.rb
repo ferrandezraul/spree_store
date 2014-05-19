@@ -16,7 +16,7 @@ And /^I set the language to (.+)/ do |locale|
     page.select 'Català', :from => 'locale'
   end
 
-  save_and_open_page
+  #save_and_open_page
   #visit current_path
 
   page.status_code.should be(200)

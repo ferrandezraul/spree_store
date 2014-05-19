@@ -12,7 +12,7 @@ describe "Login" do
   describe "Visit login page" do
     it "can go to log in page" do
       visit spree.login_path
-      save_and_open_page
+
       page.should have_selector("input[type='submit'][value=#{Spree.t(:login)}]")
       #page.should have_selector("input[type='submit'][value='Login']")
     end
