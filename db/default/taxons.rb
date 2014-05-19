@@ -220,23 +220,17 @@ taxons = [
 
 # First create parent Taxons
 taxons.each do |key, value|
-  puts "TAXON ITERATION"
-  puts "KEY = #{key}"
-  puts "VALUE = #{value}"
+
   if key[:attr]
-    puts "KEY[:attr] found!!!!"
-    puts "KEY[:attr] = #{key[:attr]}"
 
     if key[:attr][:parent]
-      puts "key[:attr][:parent] found!!!!"
-      puts "key[:attr][:parent] = #{key[:attr][:parent]}"
+
       taxon_found = Spree::Taxon.find_by_name!(key[:attr][:parent])
-      puts "Spree::Taxon with #{key[:attr][:parent]} found!!!"
-      ap taxon_found
-      sub_taxon=Spree::Taxon.create!(:name => key[:attr][:name],
-                           :parent_id => taxon_found.id )
-      puts "Created Spree::Taxon!!!"
-      ap sub_taxon
+
+      sub_taxon = Spree::Taxon.create!(:name => key[:attr][:name],
+                                       :parent_id => taxon_found.id,
+                                       :taxonomy_id => taxon_found.taxonomy_id )
+
     end
 
 
@@ -246,12 +240,8 @@ end
 
 taxons.each do |key, value|
   if key[:translations]
-    puts "key[:translations]= #{key[:translations]}"
+
     taxon = Spree::Taxon.find_by_name!(key[:translations][:name])
-    if taxon
-      puts "Taxon found!"
-      ap taxon
-    end
 
     Spree::Taxon::Translation.find_or_create_by!(:spree_taxon_id => taxon.id,
                                                  :locale => 'ca',
