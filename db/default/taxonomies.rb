@@ -2,30 +2,30 @@ english_translations = YAML.load_file('config/locales/en.yml')
 catalan_translations = YAML.load_file('config/locales/ca.yml')
 spanish_translations = YAML.load_file('config/locales/es.yml')
 
-taxonomy_translations = [
-    { :default => (english_translations['en']['taxonomies']['categorias']),
+taxonomies = [
+    { :name => 'categorias',
       :catalan_name => (catalan_translations['ca']['taxonomies']['categorias']),
       :spanish_name => (spanish_translations['es']['taxonomies']['categorias'])
     },
-    { :default => (english_translations['en']['taxonomies']['proveedor']),
+    { :name => 'proveedor',
       :catalan_name => (catalan_translations['ca']['taxonomies']['proveedor']),
       :spanish_name => (spanish_translations['es']['taxonomies']['proveedor'])
     }
 ]
 
-taxonomy_translations.each { |translation|
+taxonomies.each { |taxonomy|
 
   # Create Taxonomy
-  taxonomy = Spree::Taxonomy.create!( :position => 0,
-                                      :name => translation[:catalan_name] )
+  new_taxonomy = Spree::Taxonomy.create!( :position => 0,
+                                          :name => taxonomy[:name] )
 
   # Add Taxonomy translations
-  Spree::Taxonomy::Translation.find_or_create_by!( :spree_taxonomy_id => taxonomy.id,
+  Spree::Taxonomy::Translation.find_or_create_by!( :spree_taxonomy_id => new_taxonomy.id,
                                                    :locale => 'ca',
-                                                   :name => translation[:catalan_name] )
+                                                   :name => taxonomy[:catalan_name] )
 
 
-  Spree::Taxonomy::Translation.find_or_create_by!( :spree_taxonomy_id => taxonomy.id,
+  Spree::Taxonomy::Translation.find_or_create_by!( :spree_taxonomy_id => new_taxonomy.id,
                                                    :locale => 'es',
-                                                   :name => translation[:spanish_name] )
+                                                   :name => taxonomy[:spanish_name] )
 }
