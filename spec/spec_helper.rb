@@ -17,6 +17,7 @@ ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 
 Capybara.javascript_driver = :webkit
 Capybara.current_driver = :webkit
+Capybara.asset_host = "http://localhost:3000"
 
 RSpec.configure do |config|
   # ## Mock Framework

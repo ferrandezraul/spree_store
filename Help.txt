@@ -1,3 +1,10 @@
+Fuente: http://stackoverflow.com/questions/16096278/capybara-webkit-cannot-simulate-click-on-non-link-button-element
+javascript works in test if:
+Capybara.asset_host = "http://localhost:3000" to spec_helper.rb and leave dev server running con rails s
+
+
+
+
 cucumber
     - I personally use tag @ignore to mark scenarios not ready.
       Then, in order to skip them, use:
