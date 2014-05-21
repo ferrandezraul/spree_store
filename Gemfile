@@ -62,6 +62,8 @@ group :test, :development do
 
   gem 'capybara', branch: '2.2_stable'
 
+  gem 'capybara-webkit'
+
   # needed by capybara to show pages while running test
   gem 'launchy', '~> 2.4.2'
 end

@@ -3,6 +3,7 @@ Feature: Default Taxonomies
   As a user
   I want to have some taxonomies created by default
 
+  @javascript
   Scenario: Go to home page and check 2 existing taxonomies
     Given We visit the home page
     When page is loaded

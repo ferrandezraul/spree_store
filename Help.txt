@@ -2,6 +2,7 @@ cucumber
     - I personally use tag @ignore to mark scenarios not ready.
       Then, in order to skip them, use:
       cucumber --tags ~@ignore
+      Tag @javascript forces to use java_script_driver selenium
 
 
 rails console

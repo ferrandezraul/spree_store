@@ -145,6 +145,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    capybara-webkit (1.1.0)
+      capybara (~> 2.0, >= 2.0.2)
+      json
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.4)
@@ -344,6 +347,7 @@ PLATFORMS
 DEPENDENCIES
   awesome_print (~> 1.2.0)
   capybara
+  capybara-webkit
   coffee-rails (~> 4.0.0)
   cucumber-rails (~> 1.4.1)
   database_cleaner
