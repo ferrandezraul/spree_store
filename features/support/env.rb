@@ -10,6 +10,9 @@ require 'capybara'
 
 Capybara.javascript_driver = :webkit
 Capybara.current_driver = :webkit
+
+# Needed to have javascript and css using cucumber and capybara (save_and_open).
+# Curiosamente no necesario para rspec donde si que incluye javascript y css (save_and_open).
 Capybara.asset_host = "http://localhost:3000"
 
 # Capybara defaults to CSS3 selectors rather than XPath.
