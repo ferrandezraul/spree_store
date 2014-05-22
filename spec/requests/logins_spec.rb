@@ -12,7 +12,7 @@ describe "Login", :js => true do
   describe "Visit login page", :js => true do
     it "can go to log in page", :driver => :webkit  do
       visit spree.login_path
-      save_and_open_page
+      #save_and_open_page
       page.should have_selector("input[type='submit'][value=#{Spree.t(:login)}]")
       #page.should have_selector("input[type='submit'][value='Login']")
     end
