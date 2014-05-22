@@ -1,6 +1,6 @@
 Then /^I should have (\d+) taxonomies$/ do | number |
-  save_and_open_page
-  page.should have_content("Categories")
+  number_taxonomies = Spree::Taxonomy.all.count
+  assert_equal number_taxonomies, number
 end
 
 
