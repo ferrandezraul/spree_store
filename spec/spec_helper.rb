@@ -58,4 +58,4 @@ puts "LOAD SEED DATA"
 # Loads seed data under my default dir (my own countries, roles, states, tax_rates, etc .. )
 load "#{Rails.root}/db/default/taxonomies.rb"
 load "#{Rails.root}/db/default/taxons.rb"
-
+load "#{Rails.root}/db/default/countries.rb"
