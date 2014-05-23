@@ -1,3 +1,6 @@
+puts "Loading Taxons ..."
+
+
 catalan_translations = YAML.load_file('config/locales/ca.yml')
 spanish_translations = YAML.load_file('config/locales/es.yml')
 

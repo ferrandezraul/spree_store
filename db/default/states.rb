@@ -1,3 +1,6 @@
+puts "Loading States ..."
+
+
 country = Spree::Country.find_by(name: 'Spain')
 
 Spree::State.create!([

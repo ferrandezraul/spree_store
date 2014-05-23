@@ -1,3 +1,4 @@
+puts "Loading Tax categories ..."
 
 # GENERAL 21%
 Spree::TaxCategory.create!(:name => "General")

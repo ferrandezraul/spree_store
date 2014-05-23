@@ -1,3 +1,5 @@
+puts "Loading Countries ..."
+
 Spree::Country.create!([
   { name: "Spain", iso3: "ESP", iso: "ES", iso_name: "SPAIN", numcode: "724" }
 ])
