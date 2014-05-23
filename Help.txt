@@ -2,12 +2,17 @@ Fuente: http://stackoverflow.com/questions/16096278/capybara-webkit-cannot-simul
 javascript works in test if:
 Capybara.asset_host = "http://localhost:3000" to spec_helper.rb and leave dev server running con rails s
 
+Run test by running:
+rake
+It automatically prepares database from scratch and runs rspec and cucumber
+
 
 cucumber
     - I personally use tag @ignore to mark scenarios not ready.
       Then, in order to skip them, use:
       cucumber --tags ~@ignore
-      Tag @javascript forces to use java_script_driver selenium
+      Tag @javascript forces to use java_script_driver in my case webkit
+      Do not name a feature or step_definition with same name than a db/default filename.
 
 
 rails console
