@@ -6,5 +6,6 @@ end
 
 And /^I should have (\d+) taxons$/ do | number |
   number_taxons = Spree::Taxon.all.count  # Gets number of taxons and taxonomies
+  #save_and_open_page
   assert_equal number.to_i, number_taxons
 end

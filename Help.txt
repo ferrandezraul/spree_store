@@ -3,8 +3,6 @@ javascript works in test if:
 Capybara.asset_host = "http://localhost:3000" to spec_helper.rb and leave dev server running con rails s
 
 
-
-
 cucumber
     - I personally use tag @ignore to mark scenarios not ready.
       Then, in order to skip them, use:
@@ -16,3 +14,7 @@ rails console
     - Spree::Variant.all.each {|p| ap p }
     - Spree::Taxonomy.all.each {|p| ap p }
     - Spree::Product.all.each {|p| ap p }
+
+
+Instalation dependencies:
+sudo apt-get install nodejs libqt5webkit5-dev
