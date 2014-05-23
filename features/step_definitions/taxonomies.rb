@@ -1,5 +1,6 @@
 Then /^I should have (\d+) taxonomies$/ do | number |
   number_taxonomies = Spree::Taxonomy.all.count
+  #save_and_open_page
   assert_equal number.to_i, number_taxonomies
 end
 
