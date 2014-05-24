@@ -10,8 +10,10 @@ Feature: Default Taxonomies
     Then I should have 2 taxonomies
     And I should have 11 taxons
     And I should have 1 country
-    And I should have 1 zone
-    And I should have 2 states
-    And the zone should be EU_VAT
     And the country should be Spain
+    And I should have 1 zone
+    And the zone should be EU_VAT
+    And I should have 2 states
     And the states should be Barcelona and Gerona
+    And I should have 3 tax categories
+    And the tax categories should be General, Reducido and SuperReducido

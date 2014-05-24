@@ -12,5 +12,5 @@ Spree::TaxCategory.create!(:name => "Reducido")
 # Pan y cereales para su elaboración.
 # Leche, queso y huevos.
 # Frutas, verduras, hortalizas, legumbres y tubérculos naturales.
-Spree::TaxCategory.create!(:name => "Super Reducido")
+Spree::TaxCategory.create!(:name => "SuperReducido")
 

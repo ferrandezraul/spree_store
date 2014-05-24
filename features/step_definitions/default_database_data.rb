@@ -36,24 +36,19 @@ And /^I should have (\d+) states/ do | number |
   assert_equal number.to_i, number_states
 end
 
+And /^I should have (\d+) tax categories/ do | number |
+  tax_categories = Spree::TaxCategory.all.count
+  assert_equal number.to_i, tax_categories
+end
+
+And /^the tax categories should be (\w+), (\w+) and (\w+)/ do | category1, category2, category3 |
+  assert_equal true, Spree::TaxCategory.exists?( :name => category1 )
+  assert_equal true, Spree::TaxCategory.exists?( :name => category2 )
+  assert_equal true, Spree::TaxCategory.exists?( :name => category3 )
+end
+
 
 And /^the states should be (\w+) and (\w+)/ do | state1, state2 |
-  states = Spree::State.all
-  state1_found = false
-  state2_found = false
-
-  states.each do |state|
-
-    if state.name == state1
-      state1_found = true
-    end
-
-    if state.name == state2
-      state2_found = true
-    end
-
-  end
-
-  assert_equal true, state1_found
-  assert_equal true, state2_found
+  assert_equal true, Spree::State.exists?( :name => state1 )
+  assert_equal true, Spree::State.exists?( :name => state2 )
 end
