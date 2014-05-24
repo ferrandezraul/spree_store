@@ -16,7 +16,14 @@ And /^I set the language to (.+)/ do |locale|
     page.select 'Català', :from => 'locale'
   end
 
-  #save_and_open_page
+  # How to code this request ???
+  #Started POST "/locale/set" for 127.0.0.1 at 2014-05-24 11:23:19 +0200
+  #Processing by Spree::LocaleController#set as JSON
+  #Parameters: {"locale"=>"es"}
+
+  # Should be this based on output from rake routes ?
+  #spree.set_locale_path( { "locale" => "es" } )
+
   #visit current_path
 
   page.status_code.should be(200)
