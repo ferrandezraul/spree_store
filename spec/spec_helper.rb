@@ -60,4 +60,4 @@ load "#{Rails.root}/db/default/taxonomies.rb"
 load "#{Rails.root}/db/default/taxons.rb"
 load "#{Rails.root}/db/default/countries.rb"
 load "#{Rails.root}/db/default/states.rb"
-
+load "#{Rails.root}/db/default/zones.rb"
