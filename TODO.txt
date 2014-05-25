@@ -1,5 +1,5 @@
 //////////////////////////////  TODO /////////////////////////////////////////////////////
-Crear taxons, hijos de taxonomies (ver sqlite tables) Debug cuurent seed taxon con awesome print.
+He roto la traduccion de las taxonomias, probablemente porque al anyadir productos creo taxonomias y no su traduccion??
 
 Cucumber
 Escribir test para comprobar que solo se carga mi seed data de db/default/*.rb
