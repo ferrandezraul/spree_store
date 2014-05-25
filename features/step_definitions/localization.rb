@@ -9,11 +9,11 @@ end
 And /^I set the language to (.+)/ do |locale|
   case( locale )
   when 'catalan'
-    page.select 'Català', :from => 'locale'
+    select 'Català', :from => 'locale'
   when 'spanish'
-    page.select 'Español', :from => 'locale'
+    select 'Español', :from => 'locale'
   else
-    page.select 'Català', :from => 'locale'
+    select 'Català', :from => 'locale'
   end
 
   # How to code this request ???
@@ -23,10 +23,17 @@ And /^I set the language to (.+)/ do |locale|
 
   # Should be this based on output from rake routes ?
   #spree.set_locale_path( { "locale" => "es" } )
+  #post_via_redirect( spree.set_locale_path, :locale => "es" )
 
   #visit current_path
 
+  #second_option_xpath = "//*[@id='#{locale}']/option[2]"
+  #second_option = find(:xpath, second_option_xpath).text
+  #select(second_option, :from => locale)
+
   page.status_code.should be(200)
+
+  #save_and_open_page
 end
 
 
