@@ -1,5 +1,6 @@
-puts "Loading Taxons ..."
+#load "#{Rails.root}/db/default/products.rb"
 
+puts "Loading Taxons ..."
 
 catalan_translations = YAML.load_file('config/locales/ca.yml')
 spanish_translations = YAML.load_file('config/locales/es.yml')
@@ -7,29 +8,15 @@ spanish_translations = YAML.load_file('config/locales/es.yml')
 taxonomy_categories = Spree::Taxonomy.find_by_name!('categorias')
 taxonomy_proveiders = Spree::Taxonomy.find_by_name!('proveedor')
 
-#products = {
-#  :ror_tote => "Ruby on Rails Tote",
-#  :ror_bag => "Ruby on Rails Bag",
-#  :ror_mug => "Ruby on Rails Mug",
-#  :ror_stein => "Ruby on Rails Stein",
-#  :ror_baseball_jersey => "Ruby on Rails Baseball Jersey",
-#  :ror_jr_spaghetti => "Ruby on Rails Jr. Spaghetti",
-#  :ror_ringer => "Ruby on Rails Ringer T-Shirt",
-#  :spree_stein => "Spree Stein",
-#  :spree_mug => "Spree Mug",
-#  :spree_ringer => "Spree Ringer T-Shirt",
-#  :spree_baseball_jersey =>  "Spree Baseball Jersey",
-#  :spree_tote => "Spree Tote",
-#  :spree_bag => "Spree Bag",
-#  :spree_jr_spaghetti => "Spree Jr. Spaghetti",
-#  :apache_baseball_jersey => "Apache Baseball Jersey",
-#  :ruby_baseball_jersey => "Ruby Baseball Jersey",
-#}
+products = {
+  :soca => "Soca",
+  :croscat => "Croscat",
+}
 
 
-#products.each do |key, name|
-#  products[key] = Spree::Product.find_by_name!(name)
-#end
+products.each do |key, name|
+  products[key] = Spree::Product.find_by_name!(name)
+end
 
 taxons = [
   {
@@ -39,12 +26,7 @@ taxons = [
     :taxonomy => taxonomy_categories,
     :parent => taxonomy_categories.name,
     :position => 1,
-    #:products => [
-    #  products[:ror_tote],
-    #  products[:ror_bag],
-    #  products[:spree_tote],
-    #  products[:spree_bag]
-    #]
+    :products => []
   },
   {
     :name => "Carn de Vedella",
@@ -53,19 +35,15 @@ taxons = [
     :taxonomy => taxonomy_categories,
     :parent => taxonomy_categories.name,
     :position => 2,
-    #:products => [
-    #  products[:ror_mug],
-    #  products[:ror_stein],
-    #  products[:spree_stein],
-    #  products[:spree_mug]
-    #]
+    :products => []
   },
   {
     :name => "Carn de porc",
     :taxonomy => taxonomy_categories,
     :parent => taxonomy_categories.name,
     :catalan => (catalan_translations['ca']['taxons']['porc']),
-    :spanish =>  (spanish_translations['es']['taxons']['porc'])
+    :spanish =>  (spanish_translations['es']['taxons']['porc']),
+    :products => []
   },
   {
     :name => "Ous i làctics",
@@ -74,10 +52,7 @@ taxons = [
     :taxonomy => taxonomy_categories,
     :parent => taxonomy_categories.name,
     :position => 0,
-    #:products => [
-    #  products[:ror_jr_spaghetti],
-    #  products[:spree_jr_spaghetti]
-    #]
+    :products => []
   },
   {
     :name => "Pà",
@@ -85,15 +60,11 @@ taxons = [
     :spanish =>  (spanish_translations['es']['taxons']['pa']),
     :taxonomy => taxonomy_categories,
     :parent => taxonomy_categories.name,
-    :position => 0
-    #:products => [
-    #  products[:ror_baseball_jersey],
-    #  products[:ror_ringer],
-    #  products[:apache_baseball_jersey],
-    #  products[:ruby_baseball_jersey],
-    #  products[:spree_baseball_jersey],
-    #  products[:spree_ringer]
-    #],
+    :position => 0,
+    :products => [
+      products[:soca],
+      products[:croscat]
+    ],
   },
   {
     :name => "Sot del Palau",
@@ -101,9 +72,7 @@ taxons = [
     :spanish =>  (spanish_translations['es']['taxons']['sot-palau']),
     :taxonomy => taxonomy_proveiders,
     :parent => taxonomy_proveiders.name,
-    #:products => [
-    #  products[:ruby_baseball_jersey]
-    #]
+    :products => []
   },
   {
     :name => "Mas el Garet",
@@ -111,9 +80,7 @@ taxons = [
     :spanish =>  (spanish_translations['es']['taxons']['mas-garet']),
     :taxonomy => taxonomy_proveiders,
     :parent => taxonomy_proveiders.name,
-    #:products => [
-    #  products[:apache_baseball_jersey]
-    #]
+    :products => []
   },
   {
     :name => "La Fogaina",
@@ -121,15 +88,7 @@ taxons = [
     :spanish =>  (spanish_translations['es']['taxons']['fogaina']),
     :taxonomy => taxonomy_proveiders,
     :parent => taxonomy_proveiders.name,
-    #:products => [
-    #  products[:spree_stein],
-    #  products[:spree_mug],
-    #  products[:spree_ringer],
-    #  products[:spree_baseball_jersey],
-    #  products[:spree_tote],
-    #  products[:spree_bag],
-    #  products[:spree_jr_spaghetti],
-    #]
+    :products => []
   },
   {
     :name => "Mas Claperol",
@@ -137,15 +96,7 @@ taxons = [
     :spanish =>  (spanish_translations['es']['taxons']['mas-claperol']),
     :taxonomy => taxonomy_proveiders,
     :parent => taxonomy_proveiders.name,
-    #:products => [
-    #  products[:ror_tote],
-    #  products[:ror_bag],
-    #  products[:ror_mug],
-    #  products[:ror_stein],
-    #  products[:ror_baseball_jersey],
-    #  products[:ror_jr_spaghetti],
-    #  products[:ror_ringer],
-    #]
+    :products => []
   }
 ]
 
@@ -158,7 +109,8 @@ taxons.each do |taxon|
 
     sub_taxon = Spree::Taxon.create!(:name => taxon[:name],
                                      :parent_id => parent_taxon.id,
-                                     :taxonomy_id => parent_taxon.taxonomy_id )
+                                     :taxonomy_id => parent_taxon.taxonomy_id,
+                                     :products => taxon[:products])
 
     if taxon[:catalan] and taxon[:spanish]
 

@@ -1,3 +1,3 @@
 puts "Loading Shipping categories ..."
 
-Spree::ShippingCategory.create!(:name => "Ecocity a domicilio")
+Spree::ShippingCategory.find_or_create_by!(:name => "Ecocity a domicilio")
