@@ -1,5 +1,6 @@
 //////////////////////////////  TODO /////////////////////////////////////////////////////
 He roto la traduccion de las taxonomias, probablemente porque al anyadir productos creo taxonomias y no su traduccion??
+PROBAR LOCALIZATION TEST EN UN INTEGRATION TEST DE RAILS (NO RSPEC O CUCUMBER, USAR GET/POST)
 
 Cucumber
 Escribir test para comprobar que solo se carga mi seed data de db/default/*.rb

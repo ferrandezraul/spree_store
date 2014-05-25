@@ -10,8 +10,11 @@ And /^I set the language to (.+)/ do |locale|
   case( locale )
   when 'catalan'
     select 'Català', :from => 'locale'
+    post spree.set_locale_path, :locale => 'ca'
   when 'spanish'
     select 'Español', :from => 'locale'
+    post spree.set_locale_path, :locale => 'es'
+    save_and_open_page
   else
     select 'Català', :from => 'locale'
   end
