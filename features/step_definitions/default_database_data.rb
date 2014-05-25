@@ -46,10 +46,25 @@ And /^I should have (\d+) tax rates/ do | number |
   assert_equal number.to_i, tax_rates
 end
 
+And /^I should have (\d+) shipping category/ do | number |
+  shipping_categories = Spree::ShippingCategory.all.count
+  assert_equal number.to_i, shipping_categories
+end
+
 And /^the tax categories should be (\w+), (\w+) and (\w+)/ do | category1, category2, category3 |
   assert_equal true, Spree::TaxCategory.exists?( :name => category1 )
   assert_equal true, Spree::TaxCategory.exists?( :name => category2 )
   assert_equal true, Spree::TaxCategory.exists?( :name => category3 )
+end
+
+And /^the shipping category should be Ecocity a domicilio/ do
+  assert_equal true, Spree::ShippingCategory.exists?( :name => 'Ecocity a domicilio')
+end
+
+And /^the tax rates should be IVA General, IVA Reducido and IVA Super Reducido/ do
+  assert_equal true, Spree::TaxRate.exists?( :name => 'IVA General' )
+  assert_equal true, Spree::TaxRate.exists?( :name => 'IVA Reducido' )
+  assert_equal true, Spree::TaxRate.exists?( :name => 'IVA Super Reducido' )
 end
 
 

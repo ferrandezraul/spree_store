@@ -18,3 +18,6 @@ Feature: Default Taxonomies
     And I should have 3 tax categories
     And the tax categories should be General, Reducido and SuperReducido
     And I should have 3 tax rates
+    And the tax rates should be IVA General, IVA Reducido and IVA Super Reducido
+    And I should have 1 shipping category
+    And the shipping category should be Ecocity a domicilio
