@@ -17,3 +17,4 @@ Feature: Default Taxonomies
     And the states should be Barcelona and Gerona
     And I should have 3 tax categories
     And the tax categories should be General, Reducido and SuperReducido
+    And I should have 3 tax rates

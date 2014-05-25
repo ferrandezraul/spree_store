@@ -41,6 +41,11 @@ And /^I should have (\d+) tax categories/ do | number |
   assert_equal number.to_i, tax_categories
 end
 
+And /^I should have (\d+) tax rates/ do | number |
+  tax_rates = Spree::TaxRate.all.count
+  assert_equal number.to_i, tax_rates
+end
+
 And /^the tax categories should be (\w+), (\w+) and (\w+)/ do | category1, category2, category3 |
   assert_equal true, Spree::TaxCategory.exists?( :name => category1 )
   assert_equal true, Spree::TaxCategory.exists?( :name => category2 )

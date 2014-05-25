@@ -3,7 +3,14 @@ puts "Loading Tax rates ..."
 
 zona_eu = Spree::Zone.find_or_create_by!(name: "EU_VAT", description: "Countries that make up the EU VAT zone.")
 
-categoria_iva_general = Spree::TaxCategory.find_by_name!("General")
+
+
+begin
+  categoria_iva_general = Spree::TaxCategory.find_by_name!("General")
+rescue ActiveRecord::RecordNotFound
+  puts "Couldn't find 'General' TaxCategory."
+  exit
+end
 
 iva_general = Spree::TaxRate.create(
   :name => "IVA General",
@@ -15,7 +22,12 @@ iva_general = Spree::TaxRate.create(
 iva_general.calculator = Spree::Calculator::DefaultTax.create!
 iva_general.save!
 
-categoria_iva_reducido = Spree::TaxCategory.find_by_name!("Reducido")
+begin
+  categoria_iva_reducido = Spree::TaxCategory.find_by_name!("Reducido")
+rescue ActiveRecord::RecordNotFound
+  puts "Couldn't find 'Reducido' TaxCategory."
+  exit
+end
 
 iva_reducido = Spree::TaxRate.create(
     :name => "IVA Reducido",
@@ -28,7 +40,12 @@ iva_reducido.calculator = Spree::Calculator::DefaultTax.create!
 iva_reducido.save!
 
 
-categoria_iva_super_reducido = Spree::TaxCategory.find_by_name!("Super Reducido")
+begin
+  categoria_iva_super_reducido = Spree::TaxCategory.find_by_name!("SuperReducido")
+rescue ActiveRecord::RecordNotFound
+  puts "Couldn't find 'Super Reducido' TaxCategory."
+  exit
+end
 
 iva_super_reducido = Spree::TaxRate.create(
     :name => "IVA Super Reducido",
