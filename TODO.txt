@@ -1,6 +1,7 @@
 //////////////////////////////  TODO /////////////////////////////////////////////////////
 He roto la traduccion de las taxonomias, probablemente porque al anyadir productos creo taxonomias y no su traduccion??
-PROBAR LOCALIZATION TEST EN UN INTEGRATION TEST DE RAILS (NO RSPEC O CUCUMBER, USAR GET/POST)
+He conseguido cambiar el locale en rspec y no en capybara (see spec/request/localization_spec.rb)
+testear traducciones taxonomias rotas.
 
 Cucumber
 Escribir test para comprobar que solo se carga mi seed data de db/default/*.rb
