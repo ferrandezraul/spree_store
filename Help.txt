@@ -3,8 +3,11 @@ javascript works in test if:
 Capybara.asset_host = "http://localhost:3000" to spec_helper.rb and leave dev server running con rails s
 
 Run test by running:
-rake
-It automatically prepares database from scratch and runs rspec and cucumber
+rake db:setup_new RAILS_ENV=test  (Preparar test database con default data)
+rspec
+cucumber
+
+Porque si corro rake no hace el seed data de default
 
 
 cucumber

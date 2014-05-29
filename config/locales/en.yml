@@ -4,14 +4,14 @@ en:
     categorias: Categories
     proveedor: Proveider
   taxons:
-      xai: Carn de Xai
-      vedella: Carn de Vedella
-      porc: Carn de porc
-      ous_lactics: Ous i làctics
-      pa: Pà
-      sot-palau: Sot del Palau
-      mas-garet: Mas el Garet
-      fogaina: La Fogaina
-      mas-claperol: Mas Claperol
+    xai: Carn de Xai
+    vedella: Carn de Vedella
+    porc: Carn de porc
+    ous_lactics: Ous i làctics
+    pa: Pà
+    sot-palau: Sot del Palau
+    mas-garet: Mas el Garet
+    fogaina: La Fogaina
+    mas-claperol: Mas Claperol
 
   power_by: Power by Raul Ferrandez

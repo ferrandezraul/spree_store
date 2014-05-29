@@ -4,14 +4,14 @@ es:
     categorias: Categorias
     proveedor: Proveedor
   taxons:
-      xai: Carne de Cordero
-      vedella: Carne de Ternera
-      porc: Carne de cerdo
-      ous_lactics: Huevos i lácteos
-      pa: Pan
-      sot-palau: Sot del Palau
-      mas-garet: Mas el Garet
-      fogaina: La Fogaina
-      mas-claperol: Mas Claperol
+    xai: Carne de Cordero
+    vedella: Carne de Ternera
+    porc: Carne de cerdo
+    ous_lactics: Huevos i lácteos
+    pa: Pan
+    sot-palau: Sot del Palau
+    mas-garet: Mas el Garet
+    fogaina: La Fogaina
+    mas-claperol: Mas Claperol
 
   power_by: Hecho por Raul Ferrandez

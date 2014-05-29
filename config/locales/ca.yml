@@ -1,8 +1,8 @@
 ca:
   taxonomies:
     #Taxonomies de Spree definidas en mi db/default
-    categorias: Categories
-    proveedor: Proveïdors
+    categorias: "Categories"
+    proveedor: "Proveïdors"
   taxons:
     xai: Carn de Xai
     vedella: Carn de Vedella

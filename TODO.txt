@@ -1,11 +1,8 @@
 //////////////////////////////  TODO /////////////////////////////////////////////////////
 He roto la traduccion de las taxonomias, probablemente porque al anyadir productos creo taxonomias y no su traduccion??
-He conseguido cambiar el locale en rspec y no en capybara (see spec/request/localization_spec.rb)
+He conseguido cambiar el locale en rspec y no en capybara/cucumber (see spec/request/localization_spec.rb)
 testear traducciones taxonomias rotas.
-
-Cucumber
-Escribir test para comprobar que solo se carga mi seed data de db/default/*.rb
-Escribir test para comprobar que se cambia el locale: http://www.railway.at/articles/2009/09/12/using-cucumber-to-test-a-multilingual-app/
+En cucumber tampoco se hace un seed the la database?
 
 (Use sqlitebrowser to inspect development.sqlite3 database and create my db/seed.rb with i.e. first_or_create )
 Spree has several options for loading seed data,

@@ -5,7 +5,7 @@ puts "Loading Taxons ..."
 catalan_translations = YAML.load_file('config/locales/ca.yml')
 spanish_translations = YAML.load_file('config/locales/es.yml')
 
-taxonomy_categories = Spree::Taxonomy.find_by_name!('categorias')
+taxonomy_categories = Spree::Taxonomy.find_by_name!(catalan_translations['ca']['taxonomies']['categorias'])
 taxonomy_proveiders = Spree::Taxonomy.find_by_name!('proveedor')
 
 products = {
