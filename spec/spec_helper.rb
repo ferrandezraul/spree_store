@@ -54,20 +54,6 @@ RSpec.configure do |config|
 end
 
 
-#puts "LOAD SEED DATA"
-## Loads seed data under my default dir (my own countries, roles, states, tax_rates, etc .. )
-#load "#{Rails.root}/db/default/countries.rb"
-#load "#{Rails.root}/db/default/shipping_categories.rb"
-#load "#{Rails.root}/db/default/tax_categories.rb"
-#load "#{Rails.root}/db/default/products.rb"
-#load "#{Rails.root}/db/default/roles.rb"
-#load "#{Rails.root}/db/default/states.rb"
-#load "#{Rails.root}/db/default/tax_rates.rb"
-#load "#{Rails.root}/db/default/taxonomies.rb"
-#load "#{Rails.root}/db/default/taxons.rb"
-#load "#{Rails.root}/db/default/zones.rb"
-
-
 
 
 

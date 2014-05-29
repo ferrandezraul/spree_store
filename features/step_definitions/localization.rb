@@ -11,7 +11,7 @@ And /^I set the language to (.+)/ do |locale|
     when 'catalan'
       select 'Català', :from => 'locale'
     when 'spanish'
-      page.select 'Español', :from => 'locale'
+      select 'Español', :from => 'locale'
       #puts "Option #{find('#locale').find(:xpath, 'option[1]').text}"
       find('#locale').find(:xpath, 'option[1]').select_option
       sleep 12.seconds
