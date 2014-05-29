@@ -1,9 +1,16 @@
+Given /^We visit the home page$/ do
+  visit spree.root_path
+end
+
 Then /^I should have (\d+) taxonomies$/ do | number |
   number_taxonomies = Spree::Taxonomy.all.count
   #save_and_open_page
   assert_equal number.to_i, number_taxonomies
 end
 
+When /^page is loaded/ do
+  page.status_code.should be(200)
+end
 
 And /^I should have (\d+) taxons$/ do | number |
   number_taxons = Spree::Taxon.all.count  # Gets number of taxons and taxonomies
@@ -48,6 +55,12 @@ end
 
 And /^I should have (\d+) shipping category/ do | number |
   shipping_categories = Spree::ShippingCategory.all.count
+
+  #Spree::ShippingCategory.all.each do |category|
+  #  puts "Shipping Categoty"
+  #  ap category
+  #end
+
   assert_equal number.to_i, shipping_categories
 end
 
