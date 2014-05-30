@@ -1,4 +1,5 @@
 ca:
+  power_by: Fet per Raul Ferrandez
   taxonomies:
     #Taxonomies de Spree definidas en mi db/default
     categorias: "Categories"
@@ -14,9 +15,27 @@ ca:
     fogaina: La Fogaina
     mas-claperol: Mas Claperol
 
-  power_by: Fet per Raul Ferrandez
-
   spree:
+    items_cannot_be_shipped: Els productes seleccionats no es poden enviar a la teva adreça.
     i18n:
       # Overwrite from spree-i18n the language name displayed
       this_file_language: Català
+      available_locales: Idiomes disponibles
+      language: Idioma
+      localization_settings: Configuració idiomes
+      only_complete: només complets
+      only_incomplete: només no completes
+      select_locale: Seleccionar idioma
+      show_only: Mostrar només
+      supported_locales: Idiomes disponibles
+      translations: Traduccions
+
+  activerecord:
+    attributes:
+      spree/order:
+          email: Email del client
+          coupon_code: Codi Cupó
+      spree/payment:
+        amount: Quantia
+
+#ca.activerecord.attributes.spree/order.email
