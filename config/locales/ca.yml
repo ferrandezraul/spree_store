@@ -1,4 +1,8 @@
 ca:
+  ecocity_payment_method: Pagament al lliurament
+  ecocity_shipping_method: Ecocity a domicili
+  payment_at_delivery: Pagament en el lliurament
+  payment_at_delivery_description: Pagament en el lliurament
   power_by: Fet per Raul Ferrandez
   taxonomies:
     #Taxonomies de Spree definidas en mi db/default
