@@ -33,6 +33,21 @@ ca:
       show_only: Mostrar només
       supported_locales: Idiomes disponibles
       translations: Traduccions
+    admin:
+      mail_methods:
+        send_testmail: Enviar Mail de test
+        testmail:
+          delivery_error: Testmail delivery error
+          delivery_success: Mail de test enviat correctament
+          error: ! 'Testmail error: %{e}'
+      tab:
+        configuration: Configuració
+        orders: Comandes
+        overview:
+        products: Productes
+        promotions: Promocions
+        reports: Informes
+        users: Usuaris
 
   activerecord:
     attributes:
