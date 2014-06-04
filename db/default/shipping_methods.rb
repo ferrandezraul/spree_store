@@ -15,7 +15,7 @@ end
 shipping_category = Spree::ShippingCategory.find_or_create_by!(:name => catalan_translations['ca']['ecocity_shipping_category'])
 
 Spree::ShippingMethod.create!(
-    :name => "Ecocity a domicili Flat Rate",
+    :name => catalan_translations['ca']['ecocity_shipping_method'],
     #:zones => [eu_zone],
     :tax_category_id => Spree::TaxCategory.find_or_create_by!(:name => catalan_translations['ca']['tax_category_general']).id,
     :calculator => Spree::Calculator::Shipping::FlatRate.create!,
@@ -23,7 +23,7 @@ Spree::ShippingMethod.create!(
 )
 
 {
-  "Ecocity a domicili Flat Rate" => [6, "EUR"]
+    catalan_translations['ca']['ecocity_shipping_category'] => [6, "EUR"]
 }.each do |shipping_method_name, (price, currency)|
   shipping_method = Spree::ShippingMethod.find_by_name!(shipping_method_name)
   shipping_method.calculator.preferred_amount = price
