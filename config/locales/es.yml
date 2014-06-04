@@ -28,3 +28,4 @@ es:
   spree:
     login: Acceder como cliente
     login_name: Nombre de usuario
+    shipping_total: Gastos de envío
