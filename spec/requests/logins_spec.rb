@@ -13,7 +13,7 @@ require 'spec_helper'
 describe "Login", :js => true do
 
   describe "Visit login page", :js => true do
-    it "can go to log in page", :driver => :webkit  do
+    it "can go to log in page and overwrites translation 'Validació' for 'Accedir com a client'", :driver => :webkit  do
       visit spree.login_path
       #save_and_open_page
       page.should have_selector("input[type='submit'][value='#{catalan_translations['ca']['spree']['login']}']")
