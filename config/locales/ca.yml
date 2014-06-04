@@ -27,6 +27,7 @@ ca:
     mas-claperol: Mas Claperol
 
   spree:
+    minimum_amount_of_hundred_euros: Com a mínim has de demanar 100 EUR
     login: Accedir com a client
     login_name: Nom de usuari
     shipping_total: Despeses d'enviament

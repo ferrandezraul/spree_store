@@ -26,6 +26,7 @@ es:
     fogaina: La Fogaina
     mas-claperol: Mas Claperol
   spree:
+    minimum_amount_of_hundred_euros: Como mínimo tienes que pedir 100 EUR
     login: Acceder como cliente
     login_name: Nombre de usuario
     shipping_total: Gastos de envío
