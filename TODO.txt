@@ -1,25 +1,17 @@
 //////////////////////////////  TODO /////////////////////////////////////////////////////
-He roto la traduccion de las taxonomias, probablemente porque al anyadir productos creo taxonomias y no su traduccion??
-He conseguido cambiar el locale en rspec y no en capybara/cucumber (see spec/request/localization_spec.rb)
-testear traducciones taxonomias rotas.
-En cucumber tampoco se hace un seed the la database?
+Write cucumber scenario para comprobar que pedido minimo es 99 EUR
+Set up Mailer
 
 (Use sqlitebrowser to inspect development.sqlite3 database and create my db/seed.rb with i.e. first_or_create )
 Spree has several options for loading seed data,
 but perhaps the easiest to use here is to put ruby files in site/db/default/.
 These files are processed when rake db:seed is called, and will be processed in the order of the migration timestamps.
 
-See spree_sample files to see dependencies between objects
-Your ruby script can use one of the XLS or CSV format reading libraries to read an external file
-
-Migrate data to database for default values:
-http://guides.spreecommerce.com/developer/migration.html
-
 Seguir con test:
 
 run with:
-    1. rake
-    2. cucumber features
+    1. rake db:setup_new RAILS_ENV=test (my own task under lib/task)
+    2. cucumber
     3. rspec
 
 1. Anyadir test para comprobar que: (Usar capybara or RSPEC or cucumber)
