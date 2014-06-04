@@ -1,4 +1,7 @@
 ca:
+  tax_rate_general: IVA General
+  tax_rate_reducido: IVA Reduït
+  tax_rate_super_reducido: IVA Super Reduït
   tax_category_general: General
   tax_category_reducido: Reduït
   tax_category_super_reducido: Super reduït

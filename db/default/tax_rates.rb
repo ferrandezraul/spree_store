@@ -12,7 +12,7 @@ rescue ActiveRecord::RecordNotFound
 end
 
 iva_general = Spree::TaxRate.create(
-  :name => "IVA General",
+  :name => catalan_translations['ca']['tax_rate_general'],
   :zone => zona_eu,
   :amount => 0.21,  # 21 % IVA
   :tax_category => categoria_iva_general
@@ -29,7 +29,7 @@ rescue ActiveRecord::RecordNotFound
 end
 
 iva_reducido = Spree::TaxRate.create(
-    :name => "IVA Reducido",
+    :name => catalan_translations['ca']['tax_rate_reducido'],
     :zone => zona_eu,
     :amount => 0.10,  # 10 % IVA
     :tax_category => categoria_iva_reducido
@@ -47,7 +47,7 @@ rescue ActiveRecord::RecordNotFound
 end
 
 iva_super_reducido = Spree::TaxRate.create(
-    :name => "IVA Super Reducido",
+    :name => catalan_translations['ca']['tax_rate_super_reducido'],
     :zone => zona_eu,
     :amount => 0.04,  # 4 % IVA
     :tax_category => categoria_iva_super_reducido

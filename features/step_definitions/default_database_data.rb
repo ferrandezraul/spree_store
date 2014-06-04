@@ -76,8 +76,8 @@ end
 
 And /^the tax rates should be IVA General, IVA Reducido and IVA Super Reducido/ do
   assert_equal true, Spree::TaxRate.exists?( :name => 'IVA General' )
-  assert_equal true, Spree::TaxRate.exists?( :name => 'IVA Reducido' )
-  assert_equal true, Spree::TaxRate.exists?( :name => 'IVA Super Reducido' )
+  assert_equal true, Spree::TaxRate.exists?( :name => 'IVA Reduït' )
+  assert_equal true, Spree::TaxRate.exists?( :name => 'IVA Super Reduït' )
 end
 
 
