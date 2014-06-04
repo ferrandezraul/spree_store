@@ -15,6 +15,16 @@ Spree.user_class = "Spree::User"
 
 # Overwrite logo from /home/raul/.rvm/gems/ruby-2.1.1/bundler/gems/spree-3141905d7ca6/core/app/models/spree/app_configuration.rb
 Spree::Config.set( logo: 'head_logo.jpg' )
+Spree::Config.set( admin_interface_logo: 'head_logo.jpg' )
+
+Spree::Config.set( default_meta_description: 'Ecocity' )
+Spree::Config.set( default_meta_keywords: 'Ecocity' )
+Spree::Config.set( logo: 'head_logo.jpg' )
+Spree::Config.set( currency: 'EUR' )
+Spree::Config.set( currency_symbol_position: 'after' )
+Spree::Config.set( currency_sign_before_symbol: false )
+Spree::Config.set( logo: 'head_logo.jpg' )
+
 
 SpreeI18n::Config.available_locales = [:es, :ca] # displayed on translation forms   (Publicas + privadas en desarrollo)
 SpreeI18n::Config.supported_locales = [:es, :ca]      # displayed on frontend select box (Publicas cliente)
