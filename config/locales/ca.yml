@@ -20,6 +20,8 @@ ca:
     mas-claperol: Mas Claperol
 
   spree:
+    login: Accedir com a client
+    login_name: Nom de usuari
     items_cannot_be_shipped: Els productes seleccionats no es poden enviar a la teva adreça.
     i18n:
       # Overwrite from spree-i18n the language name displayed
