@@ -1,6 +1,7 @@
 es:
   ecocity_payment_method: Pago en la entrega
   ecocity_shipping_method: Ecocity a domicilio
+  ecocity_shipping_category: Ecocity a domicilio
   payment_at_delivery: Pago en la entrega
   payment_at_delivery_description: Pago en la entrega
   power_by: Hecho por Raul Ferrandez

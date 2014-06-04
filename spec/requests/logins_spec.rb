@@ -4,6 +4,9 @@
 # DEBUG: Use save_and_open_page
 # Capybara matchers: http://rubydoc.info/github/jnicklas/capybara/master/Capybara/Node/Matchers
 
+catalan_translations = YAML.load_file("#{Rails.root}/config/locales/ca.yml")
+spanish_translations = YAML.load_file("#{Rails.root}/config/locales/es.yml")
+
 
 require 'spec_helper'
 
@@ -13,7 +16,7 @@ describe "Login", :js => true do
     it "can go to log in page", :driver => :webkit  do
       visit spree.login_path
       #save_and_open_page
-      page.should have_selector("input[type='submit'][value=#{Spree.t(:login)}]")
+      page.should have_selector("input[type='submit'][value='#{catalan_translations['ca']['spree']['login']}']")
       #page.should have_selector("input[type='submit'][value='Login']")
     end
   end

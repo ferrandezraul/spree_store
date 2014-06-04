@@ -71,7 +71,7 @@ And /^the tax categories should be (\w+), (\w+) and (\w+)/ do | category1, categ
 end
 
 And /^the shipping category should be Ecocity a domicilio/ do
-  assert_equal true, Spree::ShippingCategory.exists?( :name => 'Ecocity a domicilio')
+  assert_equal true, Spree::ShippingCategory.exists?( :name => 'Ecocity a domicili')
 end
 
 And /^the tax rates should be IVA General, IVA Reducido and IVA Super Reducido/ do
