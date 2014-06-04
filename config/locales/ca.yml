@@ -1,4 +1,7 @@
 ca:
+  tax_category_general: General
+  tax_category_reducido: Reduït
+  tax_category_super_reducido: Super reduït
   ecocity_payment_method: Pagament al lliurament
   ecocity_shipping_method: Ecocity a domicili
   ecocity_shipping_category: Ecocity a domicili

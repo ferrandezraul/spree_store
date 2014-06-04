@@ -3,7 +3,6 @@ load "#{Rails.root}/db/default/zones.rb"
 puts "Loading Shipping Methods ..."
 
 catalan_translations = YAML.load_file("#{Rails.root}/config/locales/ca.yml")
-spanish_translations = YAML.load_file("#{Rails.root}/config/locales/es.yml")
 
 begin
 eu_zone = Spree::Zone.find_by_name!("EU_VAT")
@@ -18,7 +17,7 @@ shipping_category = Spree::ShippingCategory.find_or_create_by!(:name => catalan_
 Spree::ShippingMethod.create!(
     :name => "Ecocity a domicili Flat Rate",
     #:zones => [eu_zone],
-    :tax_category_id => Spree::TaxCategory.find_or_create_by!(:name => "General").id,
+    :tax_category_id => Spree::TaxCategory.find_or_create_by!(:name => catalan_translations['ca']['tax_category_general']).id,
     :calculator => Spree::Calculator::Shipping::FlatRate.create!,
     :shipping_categories => [shipping_category]
 )

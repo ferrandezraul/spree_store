@@ -4,12 +4,11 @@ load "#{Rails.root}/db/default/tax_categories.rb"
 puts "Loading products ..."
 
 catalan_translations = YAML.load_file("#{Rails.root}/config/locales/ca.yml")
-spanish_translations = YAML.load_file("#{Rails.root}/config/locales/es.yml")
 
 begin
-  reducido = Spree::TaxCategory.find_by_name!("Reducido")
+  reducido = Spree::TaxCategory.find_by_name!(catalan_translations['ca']['tax_category_reducido'])
 rescue ActiveRecord::RecordNotFound
-  puts "Couldn't find 'Reducido' TaxCategory."
+  puts "Couldn't find #{catalan_translations['ca']['tax_category_reducido']} TaxCategory."
   exit
 end
 

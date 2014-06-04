@@ -1,4 +1,7 @@
 es:
+  tax_category_general: General
+  tax_category_reducido: Reducido
+  tax_category_super_reducido: Super Reducido
   ecocity_payment_method: Pago en la entrega
   ecocity_shipping_method: Ecocity a domicilio
   ecocity_shipping_category: Ecocity a domicilio

@@ -1,11 +1,13 @@
 puts "Loading Tax rates ..."
 
+catalan_translations = YAML.load_file("#{Rails.root}/config/locales/ca.yml")
+
 zona_eu = Spree::Zone.find_or_create_by!(name: "EU_VAT", description: "Countries that make up the EU VAT zone.")
 
 begin
-  categoria_iva_general = Spree::TaxCategory.find_by_name!("General")
+  categoria_iva_general = Spree::TaxCategory.find_by_name!(catalan_translations['ca']['tax_category_general'])
 rescue ActiveRecord::RecordNotFound
-  puts "Couldn't find 'General' TaxCategory."
+  puts "Couldn't find #{catalan_translations['ca']['tax_category_general']} TaxCategory."
   exit
 end
 
@@ -20,9 +22,9 @@ iva_general.calculator = Spree::Calculator::DefaultTax.create!
 iva_general.save!
 
 begin
-  categoria_iva_reducido = Spree::TaxCategory.find_by_name!("Reducido")
+  categoria_iva_reducido = Spree::TaxCategory.find_by_name!(catalan_translations['ca']['tax_category_reducido'])
 rescue ActiveRecord::RecordNotFound
-  puts "Couldn't find 'Reducido' TaxCategory."
+  puts "Couldn't find #{catalan_translations['ca']['tax_category_reducido']} TaxCategory."
   exit
 end
 
@@ -38,9 +40,9 @@ iva_reducido.save!
 
 
 begin
-  categoria_iva_super_reducido = Spree::TaxCategory.find_by_name!("SuperReducido")
+  categoria_iva_super_reducido = Spree::TaxCategory.find_by_name!(catalan_translations['ca']['tax_category_super_reducido'])
 rescue ActiveRecord::RecordNotFound
-  puts "Couldn't find 'Super Reducido' TaxCategory."
+  puts "Couldn't find #{catalan_translations['ca']['tax_category_super_reducido']} TaxCategory."
   exit
 end
 

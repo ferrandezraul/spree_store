@@ -16,7 +16,7 @@ Feature: Default Taxonomies
     And I should have 2 states
     And the states should be Barcelona and Gerona
     And I should have 3 tax categories
-    And the tax categories should be General, Reducido and SuperReducido
+    And the tax categories should be General, Reduït and Super reduït
     And I should have 3 tax rates
     And the tax rates should be IVA General, IVA Reducido and IVA Super Reducido
     And I should have 2 shipping category

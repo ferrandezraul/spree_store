@@ -64,10 +64,10 @@ And /^I should have (\d+) shipping category/ do | number |
   assert_equal number.to_i, shipping_categories
 end
 
-And /^the tax categories should be (\w+), (\w+) and (\w+)/ do | category1, category2, category3 |
-  assert_equal true, Spree::TaxCategory.exists?( :name => category1 )
-  assert_equal true, Spree::TaxCategory.exists?( :name => category2 )
-  assert_equal true, Spree::TaxCategory.exists?( :name => category3 )
+And /^the tax categories should be General, Reduït and Super reduït/ do
+  assert_equal true, Spree::TaxCategory.exists?( :name => 'General' )
+  assert_equal true, Spree::TaxCategory.exists?( :name => 'Reduït' )
+  assert_equal true, Spree::TaxCategory.exists?( :name => 'Super reduït')
 end
 
 And /^the shipping category should be Ecocity a domicilio/ do
