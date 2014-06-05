@@ -1,17 +1,10 @@
+catalan_translations = YAML.load_file("#{Rails.root}/config/locales/ca.yml")
+spanish_translations = YAML.load_file("#{Rails.root}/config/locales/es.yml")
 
-#Spree::Page.create!( id: 1,
-#                     title: "Qui som",
-#                     body: "Ens dediquem a la producció d'ous i porc ecològic. ...",
-#                     slug: "/qui-som", created_at: "2014-06-04 14:24:40",
-#                     updated_at: "2014-06-04 14:24:40",
-#                     show_in_header: true,
-#                     show_in_footer: false,
-#                     foreign_link: "",
-#                     position: 0,
-#                     visible: true,
-#                     meta_keywords: "",
-#                     meta_description: "",
-#                     layout: "qui_som.html.erb",
-#                     show_in_sidebar: false,
-#                     meta_title: "",
-#                     render_layout_as_partial: false )
+
+Spree::Page.find_or_create_by_slug!( title: catalan_translations['ca']['qui-som'],
+                                     body: catalan_translations['ca']['qui-som-body'],
+                                     slug: "/qui-som",
+                                     show_in_header: true,
+                                     show_in_footer: false,
+                                     visible: true )

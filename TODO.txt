@@ -1,4 +1,8 @@
 //////////////////////////////  TODO /////////////////////////////////////////////////////
+extension spree_static_content no tiene las traducciones implementadas. Implementarlas yo mismo??
+https://github.com/spree/spree_static_content/issues/138
+
+
 Write cucumber scenario para comprobar que pedido minimo es 99 EUR
 Set up Mailer
 
