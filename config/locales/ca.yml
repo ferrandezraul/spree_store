@@ -27,7 +27,8 @@ ca:
     mas-claperol: Mas Claperol
 
   spree:
-    minimum_amount_of_hundred_euros: Com a mínim has de demanar 100 EUR
+    minimum_amount_of_hundred_euros: La teva comanda es de %{amount} EUR i com a mínim has de demanar 100 EUR. Torna a la tenda y afegeix més productes si ho desitges.
+    home: Tenda
     login: Accedir com a client
     login_name: Nom de usuari
     shipping_total: Despeses d'enviament

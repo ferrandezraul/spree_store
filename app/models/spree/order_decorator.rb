@@ -2,7 +2,7 @@
 def minimum_amount_added_to_cart?
 
   unless amount > 99
-    errors.add(:base, Spree.t(:minimum_amount_of_hundred_euros)) and return false
+    errors.add(:base, Spree.t(:minimum_amount_of_hundred_euros, :amount => amount )) and return false
   end
 
 end
