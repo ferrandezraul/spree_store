@@ -76,6 +76,9 @@ es:
     mas-claperol: Mas Claperol
   spree:
     home: Tienda
+    add_to_cart: Añadir a la cesta
+    cart: Cesta
+    empty_cart: Vaciar cesta
     minimum_amount_of_hundred_euros: Tu pedido es de %{amount} EUR y como mínimo tienes que pedir 100 EUR. Vuelve a la tienda y añade más productos si lo deseas.
     login: Acceder como cliente
     login_name: Nombre de usuario

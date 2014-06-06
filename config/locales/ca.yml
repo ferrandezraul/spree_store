@@ -81,6 +81,9 @@ ca:
   spree:
     minimum_amount_of_hundred_euros: La teva comanda es de %{amount} EUR i com a mínim has de demanar 100 EUR. Torna a la tenda y afegeix més productes si ho desitges.
     home: Tenda
+    add_to_cart: Afegir a la cistella
+    cart: Cistella
+    empty_cart: Buidar cistella
     login: Accedir com a client
     login_name: Nom de usuari
     shipping_total: Despeses d'enviament
