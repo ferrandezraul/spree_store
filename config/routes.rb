@@ -60,4 +60,9 @@ MyStore::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  Spree::Core::Engine.add_routes do
+    get "/static_pages/qui_som"
+  end
+
 end

@@ -1,0 +1,8 @@
+div.style_footer_image {
+    float: left;
+}
+
+img.style_footer_image {
+    width: 50px;
+    margin: 5px;
+}
