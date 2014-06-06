@@ -63,6 +63,7 @@ MyStore::Application.routes.draw do
 
   Spree::Core::Engine.add_routes do
     get "/static_pages/qui_som"
+    get "/static_pages/ecologico"
   end
 
 end

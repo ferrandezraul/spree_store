@@ -1,7 +1,24 @@
 ca:
   qui-som: Qui som
-  qui-som-body: Ens dediquem a la producció d'ous i porc ecològic. A més, fem la distribució d'altres aliments provenents de la comarca de La Garrotxa i voltants. Sota la marca registrada d'Ecocity oferim uns productes de la maxima qualitat, sans, frescos, ètics i amb la certificació corresponent (CCPAE).
-                La nostra finalitat és oferir productes de qualitat, artesanals, agroecològics, ètics, frescos, saludables, sostenibles... Apostem pel desenvolupament local dels nostres territoris, per la dignificació de la feina al món rural, per un preu just per productors/es i consumidors/es limitant les intermediacions a la mínima expressió, per la soberania alimentària i el consum responsable.
+  ecologico: Ecològic
+  qui-som-body: "Ens dediquem a la producció d'ous i porc ecològic. A més, fem la distribució d'altres aliments provenents de la comarca de La Garrotxa i voltants. Sota la marca registrada d'Ecocity oferim uns productes de la maxima qualitat, sans, frescos, ètics i amb la certificació corresponent (CCPAE). <br/>
+                La nostra finalitat és oferir productes de qualitat, artesanals, agroecològics, ètics, frescos, saludables, sostenibles... Apostem pel desenvolupament local dels nostres territoris, per la dignificació de la feina al món rural, per un preu just per productors/es i consumidors/es limitant les intermediacions a la mínima expressió, per la soberania alimentària i el consum responsable."
+  ecologico-body: "Tots els nostres productes son ecològics i estan certificats oficialment amb el segell CCPAE. <br/>
+                   Des d'Ecocity valorem la necessitat de recolçar les petites economies que estan engegant i des d'aquí els hi donem el nostre suport. Totes les granges productores es poden visitar. <br/>
+                   <h1>LA PRODUCCIÓ ECOLÒGICA</h1>
+                   La producció ecològica, tant ramadera com agraria, ens ofereix aliments de gran qualitat i saludables, al temps que contribueix a la diversitat biològica i a la preservació de les espècies i habitats naturals del nostre món rural. Per això, aquest sistema de producció es basa en una serie d'objectius i principis, així com en unes pràctiques de cultiu dissenyades per minimitzar l'impacte humà en el medi ambient i en els animals. <br/>
+                   La diversitat d'espècies animals i vegetals emprades en la producció ecològica, així com la varietat que es fa de l'ús de la terra, contribueix a crear un paisatge més natural que la producció convencional, apostant principalment per impulsar el desenvolupament local i regional de la zona. <br/> <br/>
+                   <h1>PRINCIPIS BÀSICS DE LA PRODUCCIÓ ECOLÒGICA:</h1>
+                   - Utilitzar productes i tècniques el més respectuoses possibles amb el medi, excloent tots aquells productes químics (fertilitzants, herbicides, pesticides, antibiòtics, hormones...) que posen en perill la nostra salut i la del nostre entorn. <br/>
+                   - Prohibeix l'ús d'organismes modificats genèticament. <br/>
+                   - Treballar de forma integrada amb l'ecosistema agrícola, de manera que es fomentin els cicles biològics naturals i es mantingui i millori la fertilitat de la terra a llarg termini. <br/>
+                   - Vetllar pel manteniment de la biodiversitat i la conservació de les varietats i races autòctones, més ben adaptades a l'ecosistema agrícola. <br/>
+                   - Establir sistemes productius sostenibles, que fomentin l'utilització dels recursos renovables i minimitzin l'entrada de matèries de fora de l'explotació. <br/>
+                   - Proporcionar unes condicions òptimes de benestar i sanitat animal que minimitzin l'estrès i permetin desenvolupar tots els aspectes del comportament innat dels animals. <br/>
+                   - Promociona la ramaderia en zones a l'aire lliure i amb alimentació ecològica. <br/><br/>
+                   SEGELL ECOLÒGIC CCPAE (Consell Català de la Producció Agrària Ecològica) <br/>
+                   A més de la normativa general de cada país, la producció ecològica està regulada per un estricte reglament de la UE, on es recullen les exigències en materia de producció vegetal, animal, així com d'inspecció, certificació i etiquetat. <br/>
+                   Els aliments ecològics estan sotmesos a controls adicionals, realitzats per entitats de certificació autoritzades i supervisades per l'administració, que garantitza el cumpliment de la normativa específica."
   tax_rate_general: IVA General
   tax_rate_reducido: IVA Reduït
   tax_rate_super_reducido: IVA Super Reduït

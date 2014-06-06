@@ -17,5 +17,9 @@ class Spree::StaticPagesController < Spree::BaseController
   def qui_som
   end
 
+  def ecologico
+
+  end
+
   respond_to :html
 end

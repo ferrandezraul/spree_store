@@ -1,7 +1,24 @@
 es:
   qui-som: Quiénes somos
-  qui-som-body: Nos dedicamos a la producción de huevos y cerdo ecológico. Además, hacemos distribución de otros alimentos que provienen de la comarca de La Garrotxa y alrededores. Bajo la marca registrada de Ecocity ofrecemos unos productos de la máxima calidad, sanos, frescos, éticos y con la certificación correspondiente (CCPAE).
-                Nuestra finalidad es ofrecer productos de calidad, artesanales, agroecológicos, éticos, frescos, saludables, sostenibles... Apostamos por el desarrollo local de nuestros territorios, por la dignificación del trabajo en el mundo rural, por un precio justo para productor/as y consumidor/as limitando las intermediaciones a la mínima expresión, por la soberanía alimentaria y el consumo responsable.
+  ecologico: Ecológico
+  qui-som-body: "Nos dedicamos a la producción de huevos y cerdo ecológico. Además, hacemos distribución de otros alimentos que provienen de la comarca de La Garrotxa y alrededores. Bajo la marca registrada de Ecocity ofrecemos unos productos de la máxima calidad, sanos, frescos, éticos y con la certificación correspondiente (CCPAE). <br/>
+                Nuestra finalidad es ofrecer productos de calidad, artesanales, agroecológicos, éticos, frescos, saludables, sostenibles... Apostamos por el desarrollo local de nuestros territorios, por la dignificación del trabajo en el mundo rural, por un precio justo para productor/as y consumidor/as limitando las intermediaciones a la mínima expresión, por la soberanía alimentaria y el consumo responsable."
+  ecologico-body: "Todos nuestros productos son ecológicos y están certificados oficialmente con el sello CCPAE. <br/>
+                   Desde Ecocity valoramos la necesidad de apoyar las pequeñas economías que están empezando y desde aquí les damos nuestro apoyo. Todas las granjas productoras se pueden visitar. <br/>
+                   <h1>LA PRODUCCIÓN ECOLÓGICA</h1>
+                   La producción ecológica, tanto ganadera como agraria, nos ofrece alimentos de gran calidad y saludables, al tiempo que contribuye a la diversidad biológica y a la preservación de las especies y habitad natural de nuestro mundo rural. Por esto, este sistema de producción se basa en una serie de objetivos y principios, así como en unas prácticas de cultivo diseñadas para minimizar el impacto humano en el medio ambiente y en los animales. <br/>
+                   La diversidad de especies animales y vegetales utilizadas en la producción ecológica, así como la variedad que se hace del uso de la tierra, contribuye a crear un paisaje más natural que la producción convencional, apostando principalmente la ecológica por impulsar el desarrollo local y regional de la zona. <br/>
+                   <h1>PRINCIPIOS BÁSICOS DE LA PRODUCCIÓN ECOLÓGICA:</h1>
+                   - Utilizar productos y técnicas lo más respetuosas posibles con el medio, excluyendo todos aquellos productos químicos (fertilizantes químicos, herbicidas, pesticidas, antibióticos, hormonas, ...) que ponen en peligro nuestra salud y la de nuestro entorno. <br/>
+                   - Prohibe el uso de organismos modificados genéticamente. <br/>
+                   - Trabajar de forma integrada con el ecosistema agrícola, de forma que se fomenten los ciclos biológicos naturales y se mantengan y mejore la fertilidad de la tierra a largo plazo. <br/>
+                   - Velar por el mantenimiento de la biodiversidad y la conservación de las variedades y razas autóctonas, mejor adaptadas al ecosistema agrícola. <br/>
+                   - Establecer sistemas productivos sostenibles, que fomenten la utilización de recursos renovables y minimicen la entrada de materias de fuera de la explotación. <br/>
+                   - Proporcionar unas condiciones óptimas de bienestar y sanidad animal que minimicen el estrés y permitan desarrollar todos los aspectos del comportamiento innato de los animales. <br/>
+                   - Promocionar la ganadería en zonas al aire libre y con alimentación ecológica. <br/><br/>
+                   SELLO ECOLÓGICO CCPAE (Consell Catala de la Producció Agraria Ecológica) <br/>
+                   Además de la normativa general de cada país, la producción ecológica está regulada por un estricto reglamento de la UE, donde se recojen las exigencias en materia de producción vegetal, animal, así como de inspección, certificación y etiquetado. <br/>
+                   Los alimentos ecológicos están sometidos a controles adicionales, realizados por entidades de certificación autorizadas y supervisadas por la administración, que garantiza el cumplimiento de la normativa específica."
   tax_rate_general: IVA General
   tax_rate_reducido: IVA Reducido
   tax_rate_super_reducido: IVA Super Reducido
