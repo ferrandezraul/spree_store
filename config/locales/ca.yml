@@ -1,9 +1,38 @@
 ca:
   qui-som: Qui som
   ecologico: Ecològic
+  servicios: Serveis
+  servicios-body: "Oferim els nostres productes: <br/>
+                   - en forma de Cistelles a Domicili <br/>
+                   - a Cooperatives i Associacions de consumidor/es <br/>
+                   - a Botigues i Restauració <br/>
+                   - a empreses de Catering ecològic. <br/>
+                   <h1>Com Funciona Ecocity per cistelles a domicili: </h1>
+                   Per demanar la cistella a través del web o també es pot fer la comanda trucant al telèfon 691232340 (de 9-13h i de 16-20h) <br/><br/>
+                   <h1>Contingut de les cistelles: </h1>
+                   El contingut de les cistelles és obert, es pot escollir entre els tots els productes que oferim. <br/>
+                   En principi tot el que apareix a la web es pot servir. Si hi haguès cap article que aquella setmana no estiguès disponible, enviarem un mail informatiu i es pot reemplaçar per un altre. <br/>
+                   S'ha de tenir en compte que els nostres productes són frescos i que no tenim stock, depenen de la producció setmanal, climatologia, criança natural dels animals, etc. <br/>
+                   Si algun article no arriba en condicions, el canvien per un altre a la següent comanda o bé retornem els diners. <br/> <br/>
+                   <h1>Comandes: </h1>
+                   Per criteris de sostenibilitat mediambiental i econòmica la comanda mí­nima és de 70 €. <br/>
+                   La comanda és acceptada quan rebeu el mail de confirmació. <br/> <br/>
+                   <h1>Entrega a domicili: </h1>
+                   Els dies de repartiment són dimecres i dijous. Li portarem la seva cistella en un màxim de 15 dies a casa seva. <br/><br/>
+                   <h1>Preus: </h1>
+                   El preu de la comanda és orientatiu perquè pot variar en funció del pes real dels productes, especialment de la carn i els formatges. Tan bon punt sapiguem el pes real i, així, el preu final de la cistella li enviarem un sms per comunicar-li. <br/><br/>
+                   <h1>Tarifes de transport: </h1>
+                   Les comandes de més de 100 € no tindran despeses de transport. <br/><br/>
+                   Per a les menors de 100 € es cobrarà :  <br/>
+                   - Província de Barcelona i Girona: 6.60 € <br/>
+                   - Per altres províncies contactar a info@ecocity.com <br/><br/>
+                   <h1>Pagament: </h1>
+                   Es podrà fer en efectiu (preferiblement) o a través de transferència bancaria. Acceptem un 10% del pagament en moneda social (ECOS)."
+
   qui-som-body: "Ens dediquem a la producció d'ous i porc ecològic. A més, fem la distribució d'altres aliments provenents de la comarca de La Garrotxa i voltants. Sota la marca registrada d'Ecocity oferim uns productes de la maxima qualitat, sans, frescos, ètics i amb la certificació corresponent (CCPAE). <br/>
                 La nostra finalitat és oferir productes de qualitat, artesanals, agroecològics, ètics, frescos, saludables, sostenibles... <br/>
                 Apostem pel desenvolupament local dels nostres territoris, per la dignificació de la feina al món rural, per un preu just per productors/es i consumidors/es limitant les intermediacions a la mínima expressió, per la soberania alimentària i el consum responsable."
+
   ecologico-body: "Tots els nostres productes son ecològics i estan certificats oficialment amb el segell CCPAE. <br/>
                    Des d'Ecocity valorem la necessitat de recolçar les petites economies que estan engegant i des d'aquí els hi donem el nostre suport. Totes les granges productores es poden visitar. <br/>
                    <h1>LA PRODUCCIÓ ECOLÒGICA</h1>
@@ -20,6 +49,7 @@ ca:
                    SEGELL ECOLÒGIC CCPAE (Consell Català de la Producció Agrària Ecològica) <br/>
                    A més de la normativa general de cada país, la producció ecològica està regulada per un estricte reglament de la UE, on es recullen les exigències en materia de producció vegetal, animal, així com d'inspecció, certificació i etiquetat. <br/>
                    Els aliments ecològics estan sotmesos a controls adicionals, realitzats per entitats de certificació autoritzades i supervisades per l'administració, que garantitza el cumpliment de la normativa específica."
+
   tax_rate_general: IVA General
   tax_rate_reducido: IVA Reduït
   tax_rate_super_reducido: IVA Super Reduït

@@ -18,7 +18,9 @@ class Spree::StaticPagesController < Spree::BaseController
   end
 
   def ecologico
+  end
 
+  def servicios
   end
 
   respond_to :html
