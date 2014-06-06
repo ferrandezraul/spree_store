@@ -5,13 +5,13 @@ catalan_translations = YAML.load_file("#{Rails.root}/config/locales/ca.yml")
 spanish_translations = YAML.load_file("#{Rails.root}/config/locales/es.yml")
 
 taxonomies = [
-    { :name => (catalan_translations['ca']['taxonomies']['categorias']),
-      :catalan_name => (catalan_translations['ca']['taxonomies']['categorias']),
-      :spanish_name => (spanish_translations['es']['taxonomies']['categorias'])
+    { :name => catalan_translations['ca']['taxonomies']['categorias'],
+      :catalan_name => catalan_translations['ca']['taxonomies']['categorias'],
+      :spanish_name => spanish_translations['es']['taxonomies']['categorias']
     },
-    { :name => 'proveedor',
-      :catalan_name => (catalan_translations['ca']['taxonomies']['proveedor']),
-      :spanish_name => (spanish_translations['es']['taxonomies']['proveedor'])
+    { :name => catalan_translations['ca']['taxonomies']['proveedor'],
+      :catalan_name => catalan_translations['ca']['taxonomies']['proveedor'],
+      :spanish_name => spanish_translations['es']['taxonomies']['proveedor']
     }
 ]
 
