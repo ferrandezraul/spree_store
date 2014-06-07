@@ -1,6 +1,4 @@
-Fuente: http://stackoverflow.com/questions/16096278/capybara-webkit-cannot-simulate-click-on-non-link-button-element
-javascript works in test if:
-Capybara.asset_host = "http://localhost:3000" to spec_helper.rb and leave dev server running con rails s
+/////////////////////////// TEST  ///////////////////////////////////////////////
 
 Run test by running:
 rake db:setup_new RAILS_ENV=test  (Preparar test database con default data)
@@ -9,20 +7,28 @@ cucumber
 
 Porque si corro rake no hace el seed data de default
 
+///////////////////////////  cucumber  ///////////////////////////////////////////////
 
-cucumber
     - I personally use tag @ignore to mark scenarios not ready.
       Then, in order to skip them, use:
       cucumber --tags ~@ignore
       Tag @javascript forces to use java_script_driver in my case webkit
       Do not name a feature or step_definition with same name than a db/default filename.
 
+/////////////////////////// JAVASCRIPT Y CSS EN TEST ///////////////////////////////////
 
-rails console
-    - Spree::Variant.all.each {|p| ap p }
-    - Spree::Taxonomy.all.each {|p| ap p }
-    - Spree::Product.all.each {|p| ap p }
+javascript works in test if:
+Capybara.asset_host = "http://localhost:3000" to spec_helper.rb and leave dev server running con rails s
+Fuente: http://stackoverflow.com/questions/16096278/capybara-webkit-cannot-simulate-click-on-non-link-button-element
 
+///////////////////////////  Instalation dependencies //////////////////////////////////
 
-Instalation dependencies:
 sudo apt-get install nodejs libqt5webkit5-dev
+
+//////////////////////////////  GEMS ///////////////////////////////////////////////////
+
+1. spree_static_content no tiene las traducciones implementadas.
+   https://github.com/spree/spree_static_content/issues/138
+   Pero se puede utilizar otro gem adicional para ello
+   https://github.com/azinazadi/spree-multilingual-static-content
+   De momento tengo mis paginas staticas creadas por mi mismo

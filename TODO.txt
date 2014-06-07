@@ -1,10 +1,9 @@
 //////////////////////////////  TODO /////////////////////////////////////////////////////
-extension spree_static_content no tiene las traducciones implementadas. Implementarlas yo mismo??
-https://github.com/spree/spree_static_content/issues/138
 
+- Write cucumber scenario para comprobar que pedido minimo es 99 EUR
+- Set up Mailer
 
-Write cucumber scenario para comprobar que pedido minimo es 99 EUR
-Set up Mailer
+//////////////////////////////  TIPS /////////////////////////////////////////////////////
 
 (Use sqlitebrowser to inspect development.sqlite3 database and create my db/seed.rb with i.e. first_or_create )
 Spree has several options for loading seed data,
@@ -25,9 +24,5 @@ run with:
 
 //////////////////////////////  HELPERS /////////////////////////////////////////////////////
 
-Restart database:
-rake db:drop
-rake db:migrate
-rake db:seed
-
-Cucumber y RSpec fallan si reseteo la database (rake db:drop). Para arreglarlo (rake db:migrate RAILS_ENV=test)
+rake db:setup_new
+rake db:setup_new RAILS_ENV=test
