@@ -65,6 +65,7 @@ MyStore::Application.routes.draw do
     get "/static_pages/qui_som"
     get "/static_pages/ecologico"
     get "/static_pages/servicios"
+    get "/static_pages/politica_privacidad"
   end
 
 end

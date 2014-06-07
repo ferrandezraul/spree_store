@@ -23,5 +23,8 @@ class Spree::StaticPagesController < Spree::BaseController
   def servicios
   end
 
+  def politica_privacidad
+  end
+
   respond_to :html
 end
