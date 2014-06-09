@@ -23,7 +23,7 @@ Fuente: http://stackoverflow.com/questions/16096278/capybara-webkit-cannot-simul
 
 ///////////////////////////  Instalation dependencies //////////////////////////////////
 
-sudo apt-get install nodejs libqt5webkit5-dev
+sudo apt-get install nodejs libqt5webkit5-dev imagemagick
 
 //////////////////////////////  GEMS ///////////////////////////////////////////////////
 
@@ -32,3 +32,9 @@ sudo apt-get install nodejs libqt5webkit5-dev
    Pero se puede utilizar otro gem adicional para ello
    https://github.com/azinazadi/spree-multilingual-static-content
    De momento tengo mis paginas staticas creadas por mi mismo
+
+
+//////////////////////////////  ICONS ///////////////////////////////////////////////////
+
+http://icons8.com/
+

@@ -41,5 +41,8 @@ products = [
 products.each do |product_attrs|
   Spree::Config[:currency] = "EUR"
 
-  Spree::Product.create!(product_attrs)
+  p = Spree::Product.create!(product_attrs)
+
+  p.master.images.create!( :attachment => File.open("#{Rails.root}/app/assets/images/products/bread/bread-512.png" )  )
+
 end
