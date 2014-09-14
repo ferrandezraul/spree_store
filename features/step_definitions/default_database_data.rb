@@ -98,3 +98,14 @@ And /^(\d+) products are from (.+)/ do | number, proveider_name |
 
   assert_equal 2, proveider.products.count
 end
+
+And /^there is a stock of (\d+) for each product/ do | number |
+  location = Spree::StockLocation.first!
+  assert_equal true, location.active?
+
+  # Fails cause default stock is still not implemented
+  Spree::Product.all.each do |product|
+    assert_equal number.to_i, product.total_on_hand
+  end
+
+end

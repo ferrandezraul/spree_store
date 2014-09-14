@@ -27,3 +27,4 @@ Feature: Default Taxonomies
     When page is loaded
     Then I should have 2 products
     And 2 products are from La Fogaina
+    And there is a stock of 1000 for each product
