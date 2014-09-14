@@ -64,6 +64,11 @@ And /^I should have (\d+) shipping category/ do | number |
   assert_equal number.to_i, shipping_categories
 end
 
+Then /^I should have (\d+) products/ do | number |
+  number_of_products = Spree::Product.all.count
+  assert_equal number.to_i, number_of_products
+end
+
 And /^the tax categories should be General, Reduït and Super reduït/ do
   assert_equal true, Spree::TaxCategory.exists?( :name => 'General' )
   assert_equal true, Spree::TaxCategory.exists?( :name => 'Reduït' )
@@ -84,4 +89,12 @@ end
 And /^the states should be (\w+) and (\w+)/ do | state1, state2 |
   assert_equal true, Spree::State.exists?( :name => state1 )
   assert_equal true, Spree::State.exists?( :name => state2 )
+end
+
+And /^(\d+) products are from (.+)/ do | number, proveider_name |
+  assert_equal true, Spree::Taxon.exists?( :name => proveider_name )
+
+  proveider = Spree::Taxon.find_by!( :name => proveider_name )
+
+  assert_equal 2, proveider.products.count
 end

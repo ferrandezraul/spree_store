@@ -21,3 +21,9 @@ Feature: Default Taxonomies
     And the tax rates should be IVA General, IVA Reducido and IVA Super Reducido
     And I should have 2 shipping category
     And the shipping category should be Ecocity a domicilio
+
+  Scenario: Go to home page and check my default products
+    Given We visit the home page
+    When page is loaded
+    Then I should have 2 products
+    And 2 products are from La Fogaina

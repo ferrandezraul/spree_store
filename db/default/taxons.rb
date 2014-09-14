@@ -21,44 +21,44 @@ end
 
 taxons = [
   {
-    :name => "Carn de Xai",
-    :catalan => (catalan_translations['ca']['taxons']['xai']),
-    :spanish =>  (spanish_translations['es']['taxons']['xai']),
+    :name => catalan_translations['ca']['taxons']['xai'],         # 'Carn de Xai'
+    :catalan => catalan_translations['ca']['taxons']['xai'],
+    :spanish =>  spanish_translations['es']['taxons']['xai'],
     :taxonomy => taxonomy_categories,
     :parent => taxonomy_categories.name,
     :position => 1,
     :products => []
   },
   {
-    :name => "Carn de Vedella",
-    :catalan => (catalan_translations['ca']['taxons']['vedella']),
-    :spanish =>  (spanish_translations['es']['taxons']['vedella']),
+    :name => catalan_translations['ca']['taxons']['vedella'],     # "Carn de Vedella",
+    :catalan => catalan_translations['ca']['taxons']['vedella'],
+    :spanish =>  spanish_translations['es']['taxons']['vedella'],
     :taxonomy => taxonomy_categories,
     :parent => taxonomy_categories.name,
     :position => 2,
     :products => []
   },
   {
-    :name => "Carn de porc",
+    :name => catalan_translations['ca']['taxons']['porc'],        # "Porc",
     :taxonomy => taxonomy_categories,
     :parent => taxonomy_categories.name,
-    :catalan => (catalan_translations['ca']['taxons']['porc']),
-    :spanish =>  (spanish_translations['es']['taxons']['porc']),
+    :catalan => catalan_translations['ca']['taxons']['porc'],
+    :spanish =>  spanish_translations['es']['taxons']['porc'],
     :products => []
   },
   {
-    :name => "Ous i làctics",
-    :catalan => (catalan_translations['ca']['taxons']['ous_lactics']),
-    :spanish =>  (spanish_translations['es']['taxons']['ous_lactics']),
+    :name => catalan_translations['ca']['taxons']['ous_lactics'],  # "Ous i làctics",
+    :catalan => catalan_translations['ca']['taxons']['ous_lactics'],
+    :spanish =>  spanish_translations['es']['taxons']['ous_lactics'],
     :taxonomy => taxonomy_categories,
     :parent => taxonomy_categories.name,
     :position => 0,
     :products => []
   },
   {
-    :name => "Pà",
-    :catalan => (catalan_translations['ca']['taxons']['pa']),
-    :spanish =>  (spanish_translations['es']['taxons']['pa']),
+    :name => catalan_translations['ca']['taxons']['pa'],          # "Pà",
+    :catalan => catalan_translations['ca']['taxons']['pa'],
+    :spanish => spanish_translations['es']['taxons']['pa'],
     :taxonomy => taxonomy_categories,
     :parent => taxonomy_categories.name,
     :position => 0,
@@ -68,34 +68,34 @@ taxons = [
     ],
   },
   {
-    :name => "Sot del Palau",
-    :catalan => (catalan_translations['ca']['taxons']['sot-palau']),
-    :spanish =>  (spanish_translations['es']['taxons']['sot-palau']),
+    :name => catalan_translations['ca']['taxons']['sot-palau'],   # "Sot del Palau",
+    :catalan => catalan_translations['ca']['taxons']['sot-palau'],
+    :spanish => spanish_translations['es']['taxons']['sot-palau'],
     :taxonomy => taxonomy_proveiders,
     :parent => taxonomy_proveiders.name,
     :products => []
   },
   {
-    :name => "Mas el Garet",
-    :catalan => (catalan_translations['ca']['taxons']['mas-garet']),
-    :spanish =>  (spanish_translations['es']['taxons']['mas-garet']),
+    :name => catalan_translations['ca']['taxons']['mas-garet'],    # "Mas el Garet",
+    :catalan => catalan_translations['ca']['taxons']['mas-garet'],
+    :spanish => spanish_translations['es']['taxons']['mas-garet'],
     :taxonomy => taxonomy_proveiders,
     :parent => taxonomy_proveiders.name,
     :products => []
   },
   {
-    :name => "La Fogaina",
-    :catalan => (catalan_translations['ca']['taxons']['fogaina']),
-    :spanish =>  (spanish_translations['es']['taxons']['fogaina']),
+    :name => catalan_translations['ca']['taxons']['fogaina'],        # "La Fogaina",
+    :catalan => catalan_translations['ca']['taxons']['fogaina'],
+    :spanish => spanish_translations['es']['taxons']['fogaina'],
     :taxonomy => taxonomy_proveiders,
     :parent => taxonomy_proveiders.name,
     :products => [ products[:soca],
                    products[:croscat] ]
   },
   {
-    :name => "Mas Claperol",
-    :catalan => (catalan_translations['ca']['taxons']['mas-claperol']),
-    :spanish =>  (spanish_translations['es']['taxons']['mas-claperol']),
+    :name => catalan_translations['ca']['taxons']['mas-claperol'],    # "Mas Claperol",
+    :catalan => catalan_translations['ca']['taxons']['mas-claperol'],
+    :spanish => spanish_translations['es']['taxons']['mas-claperol'],
     :taxonomy => taxonomy_proveiders,
     :parent => taxonomy_proveiders.name,
     :products => []
