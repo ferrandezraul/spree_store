@@ -1,4 +1,21 @@
 ca:
+  taxonomies:
+    #Taxonomies de Spree definidas en mi db/default
+    categorias: "Categories"
+    proveedor: "Proveïdors"
+  taxons:
+    xai: Carn de Xai
+    vedella: Carn de Vedella
+    porc: Carn de porc
+    ous_lactics: Ous i làctics
+    pa: Pà
+    sot-palau: Sot del Palau
+    mas-garet: Mas el Garet
+    fogaina: La Fogaina
+    mas-claperol: Mas Claperol
+
+  power_by: Fet per Raul Ferrandez
+
   qui-som: Qui som
   ecologico: Ecològic
   servicios: Serveis
@@ -69,21 +86,6 @@ ca:
   payment_at_delivery: Pagament en el lliurament
   payment_at_delivery_description: Pagament en el lliurament
   footer_privacy_policy: © Ecocity  -  Política de Privacitat
-  power_by: Fet per Raul Ferrandez
-  taxonomies:
-    #Taxonomies de Spree definidas en mi db/default
-    categorias: "Categories"
-    proveedor: "Proveïdors"
-  taxons:
-    xai: Carn de Xai
-    vedella: Carn de Vedella
-    porc: Carn de porc
-    ous_lactics: Ous i làctics
-    pa: Pà
-    sot-palau: Sot del Palau
-    mas-garet: Mas el Garet
-    fogaina: La Fogaina
-    mas-claperol: Mas Claperol
 
   spree:
     minimum_amount_of_hundred_euros: La teva comanda es de %{amount} EUR i com a mínim has de demanar 100 EUR. Torna a la tenda y afegeix més productes si ho desitges.

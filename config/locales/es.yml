@@ -1,4 +1,31 @@
 es:
+  taxonomies:
+    #Taxonomies de Spree definidas en mi db/default
+    categorias: Categorias
+    proveedor: Proveedor
+  taxons:
+    xai: Carne de Cordero
+    vedella: Carne de Ternera
+    porc: Carne de cerdo
+    ous_lactics: Huevos i lácteos
+    pa: Pan
+    sot-palau: Sot del Palau
+    mas-garet: Mas el Garet
+    fogaina: La Fogaina
+    mas-claperol: Mas Claperol
+
+  power_by: Hecho por Raul Ferrandez
+
+  spree:
+    home: Tienda
+    add_to_cart: Añadir a la cesta
+    cart: Cesta
+    empty_cart: Vaciar cesta
+    minimum_amount_of_hundred_euros: Tu pedido es de %{amount} EUR y como mínimo tienes que pedir 100 EUR. Vuelve a la tienda y añade más productos si lo deseas.
+    login: Acceder como cliente
+    login_name: Nombre de usuario
+    shipping_total: Gastos de envío
+
   qui-som: Quiénes somos
   ecologico: Ecológico
   servicios: Servicios
@@ -67,27 +94,3 @@ es:
   payment_at_delivery: Pago en la entrega
   payment_at_delivery_description: Pago en la entrega
   footer_privacy_policy: © Ecocity  -  Política de Privacidad
-  power_by: Hecho por Raul Ferrandez
-  taxonomies:
-    #Taxonomies de Spree definidas en mi db/default
-    categorias: Categorias
-    proveedor: Proveedor
-  taxons:
-    xai: Carne de Cordero
-    vedella: Carne de Ternera
-    porc: Carne de cerdo
-    ous_lactics: Huevos i lácteos
-    pa: Pan
-    sot-palau: Sot del Palau
-    mas-garet: Mas el Garet
-    fogaina: La Fogaina
-    mas-claperol: Mas Claperol
-  spree:
-    home: Tienda
-    add_to_cart: Añadir a la cesta
-    cart: Cesta
-    empty_cart: Vaciar cesta
-    minimum_amount_of_hundred_euros: Tu pedido es de %{amount} EUR y como mínimo tienes que pedir 100 EUR. Vuelve a la tienda y añade más productos si lo deseas.
-    login: Acceder como cliente
-    login_name: Nombre de usuario
-    shipping_total: Gastos de envío

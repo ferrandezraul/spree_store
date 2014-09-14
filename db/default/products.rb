@@ -3,6 +3,7 @@ load "#{Rails.root}/db/default/tax_categories.rb"
 
 puts "Loading products ..."
 
+english_translations = YAML.load_file("#{Rails.root}/config/locales/en.yml")
 catalan_translations = YAML.load_file("#{Rails.root}/config/locales/ca.yml")
 
 begin
@@ -21,28 +22,32 @@ end
 
 products = [
   {
-    :name => "Croscat",
+    :name => english_translations['en']['products']['croscat'],
     :description => 'Pan muy rico con varias semillas',
     :available_on => Time.zone.now,
     :tax_category => reducido,
     :shipping_category => shipping_category,
-    :price => 3.50
+    :price => 3.50,
+    :picture => "#{Rails.root}/app/assets/images/products/bread/bread-512.png"
   },
   {
-    :name => "Soca",
+    :name => english_translations['en']['products']['soca'],
     :description => 'Pan muy rico con varias semillas',
     :available_on => Time.zone.now,
     :tax_category => reducido,
     :shipping_category => shipping_category,
-    :price => 4.00
+    :price => 4.00,
+    :picture => "#{Rails.root}/app/assets/images/products/bread/bread-512.png"
   }
 ]
 
 products.each do |product_attrs|
   Spree::Config[:currency] = "EUR"
 
-  p = Spree::Product.create!(product_attrs)
+  # Create product with attributes except picture
+  p = Spree::Product.create!(product_attrs.except( :picture ) )
 
-  p.master.images.create!( :attachment => File.open("#{Rails.root}/app/assets/images/products/bread/bread-512.png" )  )
+  # Add picture to the master product
+  p.master.images.create!( :attachment => File.open( product_attrs[:picture] )  )
 
 end

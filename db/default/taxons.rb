@@ -2,6 +2,7 @@
 
 puts "Loading Taxons ..."
 
+english_translations = YAML.load_file('config/locales/en.yml')
 catalan_translations = YAML.load_file('config/locales/ca.yml')
 spanish_translations = YAML.load_file('config/locales/es.yml')
 
@@ -9,8 +10,8 @@ taxonomy_categories = Spree::Taxonomy.find_by_name!(catalan_translations['ca']['
 taxonomy_proveiders = Spree::Taxonomy.find_by_name!(catalan_translations['ca']['taxonomies']['proveedor'])
 
 products = {
-  :soca => "Soca",
-  :croscat => "Croscat",
+  :soca => english_translations['en']['products']['soca'],
+  :croscat => english_translations['en']['products']['croscat'],
 }
 
 
@@ -88,7 +89,8 @@ taxons = [
     :spanish =>  (spanish_translations['es']['taxons']['fogaina']),
     :taxonomy => taxonomy_proveiders,
     :parent => taxonomy_proveiders.name,
-    :products => []
+    :products => [ products[:soca],
+                   products[:croscat] ]
   },
   {
     :name => "Mas Claperol",
