@@ -6,3 +6,7 @@ img.style_footer_image {
     width: 60px;
     margin: 5px;
 }
+
+p {
+    margin: 0px;
+}

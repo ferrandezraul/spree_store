@@ -3,6 +3,9 @@
 <footer id="footer" class="sixteen columns" data-hook>
   <div id="footer-left" class="columns alpha eight" data-hook>
     <%= t('power_by') %>
+    <p>
+      <%= link_to t('footer_privacy_policy'), spree.static_pages_politica_privacidad_path %>
+    </p>
   </div>
   <div id="footer-right" class="columns omega eight" data-hook>
     <div class="style_footer_image">
@@ -16,10 +19,6 @@
         de 9-13h i de 16-20h
         Telf.: 691232340
         <a href="mailto:info@ecocity.cat?subject=Contacta Ecocity">info@ecocity.cat</a>
-      <p>
-        <%= link_to t('footer_privacy_policy'), spree.static_pages_politica_privacidad_path %>
-      </p>
-
     </div>
   </div>
 </footer>
