@@ -7,7 +7,7 @@ describe "Localizations" do
       visit spree.root_path
 
       page.should have_link( "Tenda" )
-      page.should have_link( "Carret" )
+      page.should have_link( "Cistella" )
       page.should_not have_link( "Inicio" )
 
       page.status_code.should == 200
@@ -20,8 +20,8 @@ describe "Localizations" do
       page.status_code.should == 200
       #save_and_open_page
       page.should have_link( "Tienda" )
-      page.should have_link( "Carrito" )
-      page.should_not have_link( "Carret" )
+      page.should have_link( "Cesta" )
+      page.should_not have_link( "Cistella" )
     end
   end
 
