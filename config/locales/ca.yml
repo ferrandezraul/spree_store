@@ -13,6 +13,13 @@ ca:
     mas-garet: Mas el Garet
     fogaina: La Fogaina
     mas-claperol: Mas Claperol
+  products:
+    croscat:
+      name: Croscat
+      description: "Pà molt bò amb diferent cereals"
+    soca:
+      name: Soca
+      description: "Pà molt bò amb diferent cereals"
 
   power_by: Fet per Raul Ferrandez
 

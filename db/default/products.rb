@@ -5,6 +5,7 @@ puts "Loading products ..."
 
 english_translations = YAML.load_file("#{Rails.root}/config/locales/en.yml")
 catalan_translations = YAML.load_file("#{Rails.root}/config/locales/ca.yml")
+spanish_translations = YAML.load_file("#{Rails.root}/config/locales/es.yml")
 
 begin
   reducido = Spree::TaxCategory.find_by_name!(catalan_translations['ca']['tax_category_reducido'])
@@ -22,8 +23,12 @@ end
 
 products = [
   {
-    :name => english_translations['en']['products']['croscat'],
-    :description => 'Pan muy rico con varias semillas',
+    :name => catalan_translations['ca']['products']['croscat']['name'],
+    :name_en => english_translations['en']['products']['croscat']['name'],
+    :name_es => spanish_translations['es']['products']['croscat']['name'],
+    :description => catalan_translations['ca']['products']['croscat']['description'],
+    :description_en => english_translations['en']['products']['croscat']['description'],
+    :description_es => spanish_translations['es']['products']['croscat']['description'],
     :available_on => Time.zone.now,
     :tax_category => reducido,
     :shipping_category => shipping_category,
@@ -31,8 +36,12 @@ products = [
     :picture => "#{Rails.root}/app/assets/images/products/bread/bread-512.png"
   },
   {
-    :name => english_translations['en']['products']['soca'],
-    :description => 'Pan muy rico con varias semillas',
+    :name => catalan_translations['ca']['products']['soca']['name'],
+    :name_en => english_translations['en']['products']['soca']['name'],
+    :name_es => spanish_translations['es']['products']['soca']['name'],
+    :description => catalan_translations['ca']['products']['soca']['description'],
+    :description_en => english_translations['en']['products']['soca']['description'],
+    :description_es => spanish_translations['es']['products']['soca']['description'],
     :available_on => Time.zone.now,
     :tax_category => reducido,
     :shipping_category => shipping_category,
@@ -45,7 +54,17 @@ products.each do |product_attrs|
   Spree::Config[:currency] = "EUR"
 
   # Create product with attributes except picture
-  p = Spree::Product.create!(product_attrs.except( :picture ) )
+  p = Spree::Product.create!(product_attrs.except( :picture, :name_en, :name_es, :description_en, :description_es ) )
+
+  Spree::Product::Translation.create!( { :spree_product_id => p.id,
+                                         :locale => :en,
+                                         :name => product_attrs[:name_en],
+                                         :description => product_attrs[:description_en] } )
+
+  Spree::Product::Translation.create!( { :spree_product_id => p.id,
+                                         :locale => :es,
+                                         :name => product_attrs[:name_es],
+                                         :description => product_attrs[:description_es] } )
 
   # Add picture to the master product
   p.master.images.create!( :attachment => File.open( product_attrs[:picture] )  )

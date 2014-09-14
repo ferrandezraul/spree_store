@@ -10,8 +10,8 @@ taxonomy_categories = Spree::Taxonomy.find_by_name!(catalan_translations['ca']['
 taxonomy_proveiders = Spree::Taxonomy.find_by_name!(catalan_translations['ca']['taxonomies']['proveedor'])
 
 products = {
-  :soca => english_translations['en']['products']['soca'],
-  :croscat => english_translations['en']['products']['croscat'],
+  :soca => english_translations['en']['products']['soca']['name'],
+  :croscat => english_translations['en']['products']['croscat']['name'],
 }
 
 

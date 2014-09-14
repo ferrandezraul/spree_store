@@ -13,6 +13,13 @@ es:
     mas-garet: Mas el Garet
     fogaina: La Fogaina
     mas-claperol: Mas Claperol
+  products:
+    croscat:
+      name: Croscat
+      description: Pan muy rico con diferentes semillas
+    soca:
+      name: Soca
+      description: Pan muy rico con diferentes semillas
 
   power_by: Hecho por Raul Ferrandez
 

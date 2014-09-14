@@ -14,7 +14,11 @@ en:
     fogaina: La Fogaina
     mas-claperol: Mas Claperol
   products:
-    croscat: Croscat
-    soca: Soca
+    croscat:
+      name: Croscat
+      description: Nice bread with several seeds
+    soca:
+      name: Soca
+      description: Nice bread with several seeds
 
   power_by: Power by Raul Ferrandez
