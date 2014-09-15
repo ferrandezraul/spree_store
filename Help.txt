@@ -5,7 +5,7 @@ rake db:setup
 /////////////////////////// TEST  ///////////////////////////////////////////////
 
 Run test by running:
-rake db:setup_new RAILS_ENV=test  (Preparar test database con default data)
+rake db:test_setup_new  (Preparar test database con default data)
 rspec
 cucumber
 

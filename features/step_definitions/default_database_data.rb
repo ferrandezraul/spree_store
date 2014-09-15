@@ -106,6 +106,10 @@ And /^there is a stock of (\d+) for each product/ do | number |
   # Fails cause default stock is still not implemented
   Spree::Product.all.each do |product|
     assert_equal number.to_i, product.total_on_hand
+
+    master_product = product.master
+    variant = Spree::Variant.find_by!( :id => master_product.id )
+    assert_equal true, variant.in_stock?
   end
 
 end

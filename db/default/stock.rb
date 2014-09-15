@@ -5,8 +5,11 @@ location.active = true
 location.country =  Spree::Country.where(name: 'Spain').first
 location.save!
 
-#Spree::Variant.all.each do |variant|
-#  variant.stock_items.each do |stock_item|
-#    Spree::StockMovement.create(:quantity => 10, :stock_item => stock_item)
-#  end
-#end
+
+Spree::Product.all.each do |product|
+  master_product = product.master
+  variant = Spree::Variant.find_by!( :id => master_product.id )
+  variant.stock_items.each do |stock_item|
+    Spree::StockMovement.create(:quantity => 1000, :stock_item => stock_item)
+  end
+end
