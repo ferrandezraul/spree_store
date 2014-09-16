@@ -21,3 +21,9 @@
 
 # Ignore precompiled assets
 /public/assets/*
+
+# Ignore csv backup files
+/db/~*.csv
+
+# Ignore open office backup files
+/db/~*.ods
