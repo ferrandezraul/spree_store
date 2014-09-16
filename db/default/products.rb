@@ -1,4 +1,4 @@
-require 'csv'
+require 'product_csv'
 
 load "#{Rails.root}/db/default/shipping_categories.rb"
 load "#{Rails.root}/db/default/tax_categories.rb"
@@ -23,65 +23,82 @@ rescue ActiveRecord::RecordNotFound
   exit
 end
 
-# Testing CSV parser
-products_array = CSV.read("#{Rails.root}/db/products.csv")
-products_array_clean = []
-products_array.each do |product_attributes|
-  # Filter headers. Note that it is assumed that headers start with '#'
-  products_array_clean.push product_attributes unless product_attributes.first.starts_with?("#")
-end
+#products_array = CSV.read("#{Rails.root}/db/products.csv")
+#
+#products_array_clean = []
+#products_array.each do |product_attributes|
+#  # Filter headers. Note that it is assumed that headers start with '#'
+#  products_array_clean.push product_attributes unless product_attributes.first.starts_with?("#")
+#end
 
-puts "\nMy Clean products"
-products_array_clean.each do |product_attributes|
-  puts "My product attributes are: #{product_attributes}"
-end
+#my_products = []
+#products_array_clean.each do |product_attributes|
+#  my_products.push( { :name => product_attributes[0],
+#                      :name_en => product_attributes[0],
+#                      :name_en => product_attributes[1],
+#                      :description => product_attributes[2],
+#                      :description_en => product_attributes[2],
+#                      :description_es => product_attributes[3],
+#                      :available_on => Time.zone.now,
+#                      :tax_category => reducido,
+#                      :shipping_category => shipping_category,
+#                      :price => product_attributes[5].to_f,
+#                      :picture => "#{Rails.root}/#{product_attributes[6]}"
+#                    } )
+#end
+#
+#ap my_products
 
-products = [
-  {
-    :name => catalan_translations['ca']['products']['croscat']['name'],
-    :name_en => english_translations['en']['products']['croscat']['name'],
-    :name_es => spanish_translations['es']['products']['croscat']['name'],
-    :description => catalan_translations['ca']['products']['croscat']['description'],
-    :description_en => english_translations['en']['products']['croscat']['description'],
-    :description_es => spanish_translations['es']['products']['croscat']['description'],
-    :available_on => Time.zone.now,
-    :tax_category => reducido,
-    :shipping_category => shipping_category,
-    :price => 3.50,
-    :picture => "#{Rails.root}/app/assets/images/products/bread/bread-512.png"
-  },
-  {
-    :name => catalan_translations['ca']['products']['soca']['name'],
-    :name_en => english_translations['en']['products']['soca']['name'],
-    :name_es => spanish_translations['es']['products']['soca']['name'],
-    :description => catalan_translations['ca']['products']['soca']['description'],
-    :description_en => english_translations['en']['products']['soca']['description'],
-    :description_es => spanish_translations['es']['products']['soca']['description'],
-    :available_on => Time.zone.now,
-    :tax_category => reducido,
-    :shipping_category => shipping_category,
-    :price => 4.00,
-    :picture => "#{Rails.root}/app/assets/images/products/bread/bread-512.png"
-  }
-]
+#products = [
+#  {
+#    :name => catalan_translations['ca']['products']['croscat']['name'],
+#    :name_en => english_translations['en']['products']['croscat']['name'],
+#    :name_es => spanish_translations['es']['products']['croscat']['name'],
+#    :description => catalan_translations['ca']['products']['croscat']['description'],
+#    :description_en => english_translations['en']['products']['croscat']['description'],
+#    :description_es => spanish_translations['es']['products']['croscat']['description'],
+#    :available_on => Time.zone.now,
+#    :tax_category => reducido,
+#    :shipping_category => shipping_category,
+#    :price => 3.50,
+#    :picture => "#{Rails.root}/app/assets/images/products/bread/bread-512.png"
+#  },
+#  {
+#    :name => catalan_translations['ca']['products']['soca']['name'],
+#    :name_en => english_translations['en']['products']['soca']['name'],
+#    :name_es => spanish_translations['es']['products']['soca']['name'],
+#    :description => catalan_translations['ca']['products']['soca']['description'],
+#    :description_en => english_translations['en']['products']['soca']['description'],
+#    :description_es => spanish_translations['es']['products']['soca']['description'],
+#    :available_on => Time.zone.now,
+#    :tax_category => reducido,
+#    :shipping_category => shipping_category,
+#    :price => 4.00,
+#    :picture => "#{Rails.root}/app/assets/images/products/bread/bread-512.png"
+#  }
+#]
 
-products.each do |product_attrs|
-  Spree::Config[:currency] = "EUR"
+my_products = ProductCSV.read( "#{Rails.root}/db/products.csv")
 
-  # Create product with attributes except picture
-  p = Spree::Product.create!(product_attrs.except( :picture, :name_en, :name_es, :description_en, :description_es ) )
+ap my_products
 
-  Spree::Product::Translation.create!( { :spree_product_id => p.id,
-                                         :locale => :en,
-                                         :name => product_attrs[:name_en],
-                                         :description => product_attrs[:description_en] } )
-
-  Spree::Product::Translation.create!( { :spree_product_id => p.id,
-                                         :locale => :es,
-                                         :name => product_attrs[:name_es],
-                                         :description => product_attrs[:description_es] } )
-
-  # Add picture to the master product
-  p.master.images.create!( :attachment => File.open( product_attrs[:picture] )  )
-
-end
+#my_products.each do |product_attrs|
+#  Spree::Config[:currency] = "EUR"
+#
+#  # Create product with attributes except picture
+#  p = Spree::Product.create!(product_attrs.except( :picture, :name_en, :name_es, :description_en, :description_es ) )
+#
+#  Spree::Product::Translation.create!( { :spree_product_id => p.id,
+#                                         :locale => :en,
+#                                         :name => product_attrs[:name_en],
+#                                         :description => product_attrs[:description_en] } )
+#
+#  Spree::Product::Translation.create!( { :spree_product_id => p.id,
+#                                         :locale => :es,
+#                                         :name => product_attrs[:name_es],
+#                                         :description => product_attrs[:description_es] } )
+#
+#  # Add picture to the master product
+#  p.master.images.create!( :attachment => File.open( product_attrs[:picture] )  )
+#
+#end

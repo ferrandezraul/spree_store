@@ -40,5 +40,7 @@ module MyStore
 
     config.i18n.default_locale = :ca
 
+    config.autoload_paths << Rails.root.join('lib')
+
   end
 end
