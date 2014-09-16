@@ -1,5 +1,10 @@
 //////////////////////////////  TODO /////////////////////////////////////////////////////
 
+- Continuar el leer productos con CSV en db/default/products.rb
+- Mover codigo/classes a lib y utilizarlo en db/default/products.rb
+- Escribir test para lo implementado arriba.
+
+
 - Write cucumber scenario para comprobar que pedido minimo es 99 EUR
 - Set up Mailer
 

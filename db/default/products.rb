@@ -1,3 +1,5 @@
+require 'csv'
+
 load "#{Rails.root}/db/default/shipping_categories.rb"
 load "#{Rails.root}/db/default/tax_categories.rb"
 
@@ -19,6 +21,19 @@ begin
 rescue ActiveRecord::RecordNotFound
   puts "Couldn't find #{catalan_translations['ca']['ecocity_shipping_category']} ShippingCategory."
   exit
+end
+
+# Testing CSV parser
+products_array = CSV.read("#{Rails.root}/db/products.csv")
+products_array_clean = []
+products_array.each do |product_attributes|
+  # Filter headers. Note that it is assumed that headers start with '#'
+  products_array_clean.push product_attributes unless product_attributes.first.starts_with?("#")
+end
+
+puts "\nMy Clean products"
+products_array_clean.each do |product_attributes|
+  puts "My product attributes are: #{product_attributes}"
 end
 
 products = [
