@@ -49,7 +49,7 @@ class ProductCSV
                           :picture => "#{Rails.root}/#{product_attributes[6]}" } )
     end
 
-    products_array_clean
+    my_products
 
   end
 
