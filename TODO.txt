@@ -1,6 +1,8 @@
 //////////////////////////////  TODO /////////////////////////////////////////////////////
 
-- Cambiar a ruby 1.9 para poder hacer debug en rubymine 5
+- Remove as many catalan_translations['ca']['ecocity_shipping_category'] as posible since
+  now I should be reading products and taxons from csv
+- Write test!!
 - Continuar el leer productos con CSV en db/default/products.rb
 - Mover codigo/classes a lib y utilizarlo en db/default/products.rb
 - Escribir test para lo implementado arriba.

@@ -1,4 +1,36 @@
 GIT
+  remote: git://github.com/spree/spree_i18n.git
+  revision: 90bbdf115503bf295fbf847397e5a21f40fbd0e8
+  branch: 2-2-stable
+  specs:
+    spree_i18n (3.0.0)
+      globalize (~> 4.0.0)
+      i18n_data (~> 0.4.1)
+      rails-i18n (~> 4.0.0)
+      spree_core (~> 2.2.0)
+
+GIT
+  remote: https://github.com/spree/spree_auth_devise.git
+  revision: 4959656be98742249f85879207a606e05d622cc6
+  branch: 2-2-stable
+  specs:
+    spree_auth_devise (2.2.0)
+      cancan (~> 1.6.10)
+      devise (~> 3.2.3)
+      devise-encryptable (= 0.1.2)
+      json
+      multi_json
+      spree_core (~> 2.2.0)
+
+GIT
+  remote: https://github.com/spree/spree_gateway.git
+  revision: 46b8610fd1db198410542374536c7cb17263b1a3
+  branch: 2-2-stable
+  specs:
+    spree_gateway (2.2.1)
+      spree_core (~> 2.2.0)
+
+GIT
   remote: git://github.com/spree/spree.git
   revision: 3141905d7ca6681463060372c22602416f8eee9b
   branch: 2-2-stable
@@ -52,38 +84,6 @@ GIT
       stringex (~> 1.5.1)
     spree_sample (2.2.2.beta)
       spree_core (= 2.2.2.beta)
-
-GIT
-  remote: git://github.com/spree/spree_i18n.git
-  revision: 90bbdf115503bf295fbf847397e5a21f40fbd0e8
-  branch: 2-2-stable
-  specs:
-    spree_i18n (3.0.0)
-      globalize (~> 4.0.0)
-      i18n_data (~> 0.4.1)
-      rails-i18n (~> 4.0.0)
-      spree_core (~> 2.2.0)
-
-GIT
-  remote: https://github.com/spree/spree_auth_devise.git
-  revision: 4959656be98742249f85879207a606e05d622cc6
-  branch: 2-2-stable
-  specs:
-    spree_auth_devise (2.2.0)
-      cancan (~> 1.6.10)
-      devise (~> 3.2.3)
-      devise-encryptable (= 0.1.2)
-      json
-      multi_json
-      spree_core (~> 2.2.0)
-
-GIT
-  remote: https://github.com/spree/spree_gateway.git
-  revision: 46b8610fd1db198410542374536c7cb17263b1a3
-  branch: 2-2-stable
-  specs:
-    spree_gateway (2.2.1)
-      spree_core (~> 2.2.0)
 
 GEM
   remote: https://rubygems.org/
