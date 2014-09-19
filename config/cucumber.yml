@@ -6,3 +6,14 @@ std_opts = "--format #{ENV['CUCUMBER_FORMAT'] || 'pretty'} --strict --tags ~@wip
 default: <%= std_opts %> features
 wip: --tags @wip:3 --wip features
 rerun: <%= rerun_opts %> --format rerun --out rerun.txt --strict --tags ~@wip
+
+
+# Profiles
+
+default:
+  --format progress
+  --format html
+  --out=features_report.html
+  -t ~@test-harness
+  -t ~@manual
+  -t ~@known-to-fail
