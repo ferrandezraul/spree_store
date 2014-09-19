@@ -35,28 +35,13 @@ class ProductCSV
     # CSV.read(file_path, { :col_sep => ';' })
     products = CSV.read(file_path)
 
-    products_clean = []
-    products.each do |product_attributes|
-      # Filter headers. Note that it is assumed that headers start with '#'
-      products_clean.push product_attributes unless product_attributes.first.starts_with?("#")
-    end
+    products = remove_headers(products)
 
     my_products = []
-    products_clean.each do |product|
+    products.each do |product|
 
-      begin
-        tax_category = Spree::TaxCategory.find_by_name!(product[4])
-      rescue ActiveRecord::RecordNotFound
-        puts "Couldn't find #{product[Columns::TAX_CATEGORY]} TaxCategory."
-        exit
-      end
-
-      begin
-        shipping_category = Spree::ShippingCategory.find_by_name!(product[Columns::SHIPPING_CATEGORY])
-      rescue ActiveRecord::RecordNotFound
-        puts "Couldn't find #{product[Columns::SHIPPING_CATEGORY]} ShippingCategory."
-        exit
-      end
+      tax = tax_category(product[Columns::TAX_CATEGORY])
+      shipping = shipping_category(product[Columns::SHIPPING_CATEGORY])
 
       my_products.push( { :name => product[Columns::NAME],
                           :name_en => product[Columns::NAME],
@@ -65,14 +50,48 @@ class ProductCSV
                           :description_en => product[Columns::DESCRIPTION],
                           :description_es => product[Columns::DESCRIPTION_ES],
                           :available_on => Time.zone.now,
-                          :tax_category => tax_category,
-                          :shipping_category => shipping_category,
+                          :tax_category => tax,
+                          :shipping_category => shipping,
                           :price => product[Columns::PRICE].to_f,
                           :picture => "#{Rails.root}/#{product[Columns::PICTURE_PATH]}" } )
     end
 
     my_products
 
+  end
+
+  private
+
+  def self.remove_headers(products)
+    products_clean = []
+    products.each do |product_attributes|
+      # Filter headers. Note that it is assumed that headers start with '#'
+      products_clean.push product_attributes unless product_attributes.first.starts_with?("#")
+    end
+
+    products = products_clean
+  end
+
+  def self.tax_category(name)
+    begin
+      category = Spree::TaxCategory.find_by_name!(name)
+    rescue ActiveRecord::RecordNotFound
+      puts "Couldn't find #{name} TaxCategory."
+      exit
+    end
+
+    category
+  end
+
+  def self.shipping_category(name)
+    begin
+      category = Spree::ShippingCategory.find_by_name!(name)
+    rescue ActiveRecord::RecordNotFound
+      puts "Couldn't find #{name} shipping category."
+      exit
+    end
+
+    category
   end
 
 end
