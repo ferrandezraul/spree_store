@@ -2,7 +2,7 @@ namespace :db do
 
   desc "drop, migrate and seed"
   task :test_setup_new do
-    puts "You are dropping, migrating and seeding in #{Rails.env} environment"
+    puts "You are dropping, migrating and seeding in RAILS_ENV=test environment"
 
     #Rake::Task['db:drop'].invoke
     #Rake::Task['db:create'].invoke

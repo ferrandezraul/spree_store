@@ -1,3 +1,6 @@
+#!/bin/env ruby
+# encoding: utf-8
+
 Given /^We visit the home page$/ do
   visit spree.root_path
 end

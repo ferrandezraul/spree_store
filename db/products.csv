@@ -1,3 +1,3 @@
-# catalan name #,# spanish name #,# catalan description #,# spanish description #,# categoria fiscal #,# precio #,# imagen #
-Croscat,Croscat,Pà molt bò,Pan muy bueno,Reduït,3.5,app/assets/images/products/bread/bread-512.png
-Soca,Soca,Pà molt bò,Pan muy bueno,Reduït,4,app/assets/images/products/bread/bread-512.png
+# catalan name #,# spanish name #,# catalan description #,# spanish description #,# categoria fiscal #,# precio #,# imagen #,# Shipping Category #
+Croscat,Croscat,Pà molt bò,Pan muy bueno,Reduït,3.5,app/assets/images/products/bread/bread-512.png,Ecocity a domicili
+Soca,Soca,Pà molt bò,Pan muy bueno,Reduït,4,app/assets/images/products/bread/bread-512.png,Ecocity a domicili

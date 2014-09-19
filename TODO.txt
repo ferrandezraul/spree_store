@@ -1,5 +1,6 @@
 //////////////////////////////  TODO /////////////////////////////////////////////////////
 
+- Generate html when running cucumber
 - Remove as many catalan_translations['ca']['ecocity_shipping_category'] as posible since
   now I should be reading products and taxons from csv
 - Write test!!
@@ -21,7 +22,7 @@ These files are processed when rake db:seed is called, and will be processed in 
 Seguir con test:
 
 run with:
-    1. rake db:setup_new RAILS_ENV=test (my own task under lib/task)
+    1. rake db:test_setup_new (my own task under lib/task)
     2. cucumber
     3. rspec
 

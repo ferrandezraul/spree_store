@@ -1,3 +1,6 @@
+#!/bin/env ruby
+# encoding: utf-8
+
 # To make Capybara 'page' work (and to make Capybara interactions like click_button or fill_in work),
 # instead of retrieving with rspec's 'get', you need to retrieve with Capybara's 'visit':
 #
