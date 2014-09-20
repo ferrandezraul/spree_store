@@ -30,12 +30,25 @@ class TaxonCSV
 
     taxons = remove_headers(taxons)
 
+    ap "\nMY TAXONS"
+    ap taxons
+
     my_taxons = []
     taxons.each do |taxon|
-
+      ap "\nTAXON"
+      ap taxon
       taxonomy_category = taxonomy(taxon[Column::TAXONOMY])
 
-      product = products(taxon[Column::PRODUCTS])
+      ap "\nMy Taxonomy"
+      ap taxonomy_category
+
+      products = []
+      if taxon[Column::PRODUCTS]
+        products << product(taxon[Column::PRODUCTS])
+      end
+
+      ap "\nMy Product"
+      ap products
 
       my_taxons.push( { :name => taxon[Column::NAME],
                         :name_en => taxon[Column::NAME],
@@ -43,7 +56,7 @@ class TaxonCSV
                         :taxonomy => taxonomy_category,
                         :parent => taxonomy_category.name,
                         :position => taxon[Column::POSITION].to_i,
-                        :products => product } )
+                        :products => products } )
     end
 
     my_taxons
@@ -52,14 +65,14 @@ class TaxonCSV
 
   private
 
-  def self.remove_headers(products)
-    products_clean = []
-    products.each do |product_attributes|
+  def self.remove_headers(taxons)
+    taxons_clean = []
+    taxons.each do |taxon_attributes|
       # Filter headers. Note that it is assumed that headers start with '#'
-      products_clean.push product_attributes unless product_attributes.first.starts_with?("#")
+      taxons_clean.push taxon_attributes unless taxon_attributes.first.starts_with?("#")
     end
 
-    products = products_clean
+    taxons = taxons_clean
   end
 
   def self.taxonomy(name)
@@ -73,15 +86,15 @@ class TaxonCSV
     category
   end
 
-  def self.products(name)
+  def self.product(name)
     begin
-      category = Spree::Product.find_by_name!(name)
+      product = Spree::Product.find_by_name!(name)
     rescue ActiveRecord::RecordNotFound
       puts "Couldn't find #{name} Product."
       exit
     end
 
-    category
+    product
   end
 
 end

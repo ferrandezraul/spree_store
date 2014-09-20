@@ -5,10 +5,6 @@ load "#{Rails.root}/db/default/tax_categories.rb"
 
 puts "Loading products ..."
 
-english_translations = YAML.load_file("#{Rails.root}/config/locales/en.yml")
-catalan_translations = YAML.load_file("#{Rails.root}/config/locales/ca.yml")
-spanish_translations = YAML.load_file("#{Rails.root}/config/locales/es.yml")
-
 my_products = ProductCSV.read( "#{Rails.root}/db/products.csv")
 
 #ap my_products
