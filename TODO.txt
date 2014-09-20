@@ -1,5 +1,7 @@
 //////////////////////////////  TODO /////////////////////////////////////////////////////
 
+- fix Columns in CSV
+- Fix Products in Taxons csv
 - Remove as many catalan_translations['ca']['ecocity_shipping_category'] as posible since
   now I should be reading products and taxons from csv
 - Write test!!
