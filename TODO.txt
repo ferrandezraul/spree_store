@@ -1,6 +1,7 @@
 //////////////////////////////  TODO /////////////////////////////////////////////////////
 
-- Correct images size (use smaller for bread as well ??)
+- Rename products (in both csv!!) and put weight into description. Add more products to see how page looks like.
+- Add more test.
 - Move back to ruby 2.1 and test.
 - Make CSV readers stronger to errors. Test what happen with empty description in csv, or any other empty field.
 - Add test that checks localization of default taxonomies and taxons
