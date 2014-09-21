@@ -1,7 +1,6 @@
 //////////////////////////////  TODO /////////////////////////////////////////////////////
 
 - Fix Products in Taxons csv. Currently, only one product is added to a taxon. Modify TaxonCSV
-- fix Columns in CSV
 - delete unnecessary entries from locale files now that products and taxons and their translations are imported
   from CSV files
 - Remove as many catalan_translations['ca']['ecocity_shipping_category'] as posible since

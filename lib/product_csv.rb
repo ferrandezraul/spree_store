@@ -1,6 +1,7 @@
 require 'csv'
 
-module Columns
+class ProductCSV
+  # Columns
   NAME = 0               # Catalan name
   NAME_ES = 1            # Spanish name
   DESCRIPTION = 2        # Catalan description
@@ -9,9 +10,7 @@ module Columns
   PRICE = 5              # Price
   PICTURE_PATH = 6       # Path to picture
   SHIPPING_CATEGORY = 7  # Shipping category
-end
 
-class ProductCSV
   #  Returns array of hashes with Product attributes
   #  = Example
   #  products = [
@@ -40,20 +39,20 @@ class ProductCSV
     my_products = []
     products.each do |product|
 
-      tax = tax_category(product[Columns::TAX_CATEGORY])
-      shipping = shipping_category(product[Columns::SHIPPING_CATEGORY])
+      tax = tax_category(product[TAX_CATEGORY])
+      shipping = shipping_category(product[SHIPPING_CATEGORY])
 
-      my_products.push( { :name => product[Columns::NAME],
-                          :name_en => product[Columns::NAME],
-                          :name_es => product[Columns::NAME_ES],
-                          :description => product[Columns::DESCRIPTION],
-                          :description_en => product[Columns::DESCRIPTION],
-                          :description_es => product[Columns::DESCRIPTION_ES],
+      my_products.push( { :name => product[NAME],
+                          :name_en => product[NAME],
+                          :name_es => product[NAME_ES],
+                          :description => product[DESCRIPTION],
+                          :description_en => product[DESCRIPTION],
+                          :description_es => product[DESCRIPTION_ES],
                           :available_on => Time.zone.now,
                           :tax_category => tax,
                           :shipping_category => shipping,
-                          :price => product[Columns::PRICE].to_f,
-                          :picture => "#{Rails.root}/#{product[Columns::PICTURE_PATH]}" } )
+                          :price => product[PRICE].to_f,
+                          :picture => "#{Rails.root}/#{product[PICTURE_PATH]}" } )
     end
 
     my_products

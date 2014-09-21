@@ -1,14 +1,13 @@
 require 'csv'
 
-module Column
+class TaxonCSV
+  # Columns
   NAME = 0               # Catalan name
   NAME_ES = 1            # Spanish name
   TAXONOMY = 2           # Taxonomy (Needs to be created before)
   POSITION = 3           # Position
   PRODUCTS = 4           # Tax Category (Needs to be created before)
-end
 
-class TaxonCSV
   #  Returns array of hashes with Taxon attributes
   #  = Example
   #  products = [
@@ -37,25 +36,25 @@ class TaxonCSV
     taxons.each do |taxon|
       ap "\nTAXON"
       ap taxon
-      taxonomy_category = taxonomy(taxon[Column::TAXONOMY])
+      taxonomy_category = taxonomy(taxon[TAXONOMY])
 
       ap "\nMy Taxonomy"
       ap taxonomy_category
 
       products = []
-      if taxon[Column::PRODUCTS]
-        products << product(taxon[Column::PRODUCTS])
+      if taxon[PRODUCTS]
+        products << product(taxon[PRODUCTS])
       end
 
       ap "\nMy Product"
       ap products
 
-      my_taxons.push( { :name => taxon[Column::NAME],
-                        :name_en => taxon[Column::NAME],
-                        :name_es => taxon[Column::NAME_ES],
+      my_taxons.push( { :name => taxon[NAME],
+                        :name_en => taxon[NAME],
+                        :name_es => taxon[NAME_ES],
                         :taxonomy => taxonomy_category,
                         :parent => taxonomy_category.name,
-                        :position => taxon[Column::POSITION].to_i,
+                        :position => taxon[POSITION].to_i,
                         :products => products } )
     end
 
@@ -95,6 +94,10 @@ class TaxonCSV
     end
 
     product
+  end
+
+  def self.products_from_taxon(taxon)
+
   end
 
 end
