@@ -497,7 +497,7 @@ ul#products {
     .product-image {
       border: $default_border;
       padding: 5px;
-      min-height: 110px;
+      //min-height: 110px;  // This was too big  // This was too big  (Note that you should upload images with same height and width if possible)
       background-color: $product_background_color;
 
       &:hover {
@@ -561,7 +561,7 @@ ul#products {
     background-color: $product_background_color;
 
     img {
-      min-height: 240px;
+      //min-height: 120px;  // This was too big  (Note that you should upload images with same height and width if possible)
       max-width: 100%; /* Fluid images for product */
     }
   }

@@ -28,6 +28,12 @@ These files are processed when rake db:seed is called, and will be processed in 
 //////////////////////// ICONS ///////////////////////////////////////////
 
 Thanks to http://icons8.com
+If I change the paperclip settings for images (see config/initializers/spree.rb) , to see the changes run:
+bundle exec rake paperclip:refresh:thumbnails class=Spree::Image
+
+Note that you should upload images with same height and width if possible in order to improve views,
+otherwise you would have to tweek the views with css. (See commented lines in /app/assets/stylesheets/spree/frontend/screen.css.scss
+for .product-image class where min-height: 110px is commented out. And .product-image img where min-height is also commented out
 
 ///////////////////////////////////////////////////////////////////////////
 

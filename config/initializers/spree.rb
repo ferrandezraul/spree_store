@@ -25,10 +25,15 @@ Spree::Config.set( currency_symbol_position: 'after' )
 Spree::Config.set( currency_sign_before_symbol: false )
 Spree::Config.set( logo: 'head_logo.jpg' )
 
-
 SpreeI18n::Config.available_locales = [:es, :ca] # displayed on translation forms   (Publicas + privadas en desarrollo)
 SpreeI18n::Config.supported_locales = [:es, :ca]      # displayed on frontend select box (Publicas cliente)
 
 # Examples
 #SpreeI18n::Config.available_locales = [:en, :es, :'pt-BR'] # displayed on translation forms
 #SpreeI18n::Config.supported_locales = [:en, :'pt-BR'] # displayed on frontend select box
+
+# Be carefully cause images sizes can be controlled with css or javascript
+# i.e. See app/assets/stylesheets/spree/frontend/screen.css
+# where I could change the size of image in products view like this
+# #product-images #main-image img { min-height: 120px; max-width: 100%; }
+Spree::Image.attachment_definitions[:attachment][:styles] = { :mini => '48x48', :small => '48x48', :product => '90x90', :large => '90x90' }
