@@ -21,6 +21,7 @@
 
 # Ignore precompiled assets
 /public/assets/*
+/public/spree/*
 
 # Ignore csv backup files
 /db/.~*.csv#
