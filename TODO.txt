@@ -1,5 +1,6 @@
 //////////////////////////////  TODO /////////////////////////////////////////////////////
 
+- Make CSV readers stronger to errors. Test what happen with empty description in csv, or any other empty field.
 - Add test that checks localization of default taxonomies and taxons
 - Fix Products in Taxons csv. Currently, only one product is added to a taxon. Modify TaxonCSV
 - delete unnecessary entries from locale files now that products and taxons and their translations are imported
@@ -21,6 +22,12 @@
 Spree has several options for loading seed data,
 but perhaps the easiest to use here is to put ruby files in site/db/default/.
 These files are processed when rake db:seed is called, and will be processed in the order of the migration timestamps.
+
+//////////////////////// ICONS ///////////////////////////////////////////
+
+Thanks to http://icons8.com
+
+///////////////////////////////////////////////////////////////////////////
 
 Seguir con test:
 

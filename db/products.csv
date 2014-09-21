@@ -1,3 +1,11 @@
 # catalan name #,# spanish name #,# catalan description #,# spanish description #,# categoria fiscal #,# precio #,# imagen #,# Shipping Category #
+6 ous,6 Huevos,6 Ous de la Granja Duranoc,6 Huevos de la Granja Duranoc,Super reduït,1.56,app/assets/images/products/ous/eggs-48.png,Ecocity a domicili
+12 ous,12 Huevos,12 Ous de la Granja Duranoc,12 Huevos de la Granja Duranoc,Super reduït,3,app/assets/images/products/ous/eggs-48.png,Ecocity a domicili
+Bistec 1ª cap de mort (0.5 kg aprox),Bistec 1ª (0.5 kg aprox),Bistec de vedella,Bistec de ternera,Reduït,15,app/assets/images/products/ternera/cow-48.png,Ecocity a domicili
+Bistec 2ª (1 kg aprox - 4 ó 5 bistecs),Bistec 2ª (1 kg aprox – 4 o 5 bistecs),Bistec de vedella,Bistec de ternera,Reduït,11.28,app/assets/images/products/ternera/cow-48.png,Ecocity a domicili
+Galtes (0.5 kg aprox),Mejillas (0.5 kg aprox),Galtes de vedella,Mejillas de ternera,Reduït,10,app/assets/images/products/ternera/cow-48.png,Ecocity a domicili
+Filet de vedella (1 Kg.),Filete de ternera (1 Kg.),Filet de vedella,Filete de ternera,Reduït,16.5,app/assets/images/products/ternera/steak-48.png,Ecocity a domicili
+"Filet de vedella (0,5 Kg.)","Filete de ternera (0,5 Kg.)",Filet de vedella,Filete de ternera,Reduït,33,app/assets/images/products/ternera/steak-48.png,Ecocity a domicili
 Croscat,Croscat,Pà molt bò,Pan muy bueno,Reduït,3.5,app/assets/images/products/bread/bread-512.png,Ecocity a domicili
 Soca,Soca,Pà molt bò,Pan muy bueno,Reduït,4,app/assets/images/products/bread/bread-512.png,Ecocity a domicili
+3 Botifarres fresques (0.320 kg aprox),3 Butifarres frescas (0.320 kg aprox),PORC (Producció pròpia),CERDO (Producción própia),Reduït,8,app/assets/images/products/porc/year_of_pig-48.png,Ecocity a domicili

@@ -8,7 +8,7 @@ Feature: Default Taxonomies
     Given We visit the home page
     When page is loaded
     Then I should have 2 taxonomies
-    And I should have 11 taxons
+    And I should have 15 taxons
     And I should have 1 country
     And the country should be Spain
     And I should have 1 zone
@@ -25,6 +25,6 @@ Feature: Default Taxonomies
   Scenario: Go to home page and check my default products
     Given We visit the home page
     When page is loaded
-    Then I should have 2 products
+    Then I should have 10 products
     And 2 products are from La Fogaina
     And there is a stock of 1000 for each product
