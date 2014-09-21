@@ -1,5 +1,6 @@
 //////////////////////////////  TODO /////////////////////////////////////////////////////
 
+- Add test that checks localization of default taxonomies and taxons
 - Fix Products in Taxons csv. Currently, only one product is added to a taxon. Modify TaxonCSV
 - delete unnecessary entries from locale files now that products and taxons and their translations are imported
   from CSV files

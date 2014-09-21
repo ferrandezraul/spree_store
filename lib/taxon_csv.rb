@@ -22,32 +22,17 @@ class TaxonCSV
   #  }
   #]
   def self.read( file_path )
-
     # By default separator is ","
     # CSV.read(file_path, { :col_sep => ';' })
     taxons = CSV.read(file_path)
 
     taxons = remove_headers(taxons)
 
-    ap "\nMY TAXONS"
-    ap taxons
-
     my_taxons = []
     taxons.each do |taxon|
-      ap "\nTAXON"
-      ap taxon
       taxonomy_category = taxonomy(taxon[TAXONOMY])
 
-      ap "\nMy Taxonomy"
-      ap taxonomy_category
-
-      products = []
-      if taxon[PRODUCTS]
-        products << product(taxon[PRODUCTS])
-      end
-
-      ap "\nMy Product"
-      ap products
+      products = products_from_taxon( taxon )
 
       my_taxons.push( { :name => taxon[NAME],
                         :name_en => taxon[NAME],
@@ -97,7 +82,13 @@ class TaxonCSV
   end
 
   def self.products_from_taxon(taxon)
-
+    products = []
+    i = 0
+    while taxon[PRODUCTS + i]
+      products << product(taxon[PRODUCTS + i])
+      i +=1
+    end
+    products
   end
 
 end
