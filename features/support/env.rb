@@ -5,15 +5,6 @@
 # files.
 
 require 'cucumber/rails'
-require 'capybara'
-
-
-Capybara.javascript_driver = :webkit
-Capybara.current_driver = :webkit
-
-# Needed to have javascript and css using cucumber and capybara (save_and_open).
-# Curiosamente no necesario para rspec donde si que incluye javascript y css (save_and_open).
-Capybara.asset_host = "http://localhost:3000"
 
 # Capybara defaults to CSS3 selectors rather than XPath.
 # If you'd prefer to use XPath, just uncomment this line and adjust any
@@ -59,9 +50,9 @@ end
 #     DatabaseCleaner.strategy = :transaction
 #   end
 #
+
 # Possible values are :truncation and :transaction
 # The :transaction strategy is faster, but might give you threading problems.
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
-Cucumber::Rails::Database.javascript_strategy = :transaction
-
+Cucumber::Rails::Database.javascript_strategy = :truncation
 

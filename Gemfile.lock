@@ -361,7 +361,7 @@ DEPENDENCIES
   capybara
   capybara-webkit
   coffee-rails (~> 4.0.0)
-  cucumber-rails (~> 1.4.1)
+  cucumber-rails
   database_cleaner
   debugger
   jbuilder (~> 1.2)

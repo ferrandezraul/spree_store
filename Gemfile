@@ -59,7 +59,7 @@ gem 'awesome_print', '~> 1.2.0'
 
 group :test, :development do
   gem 'rspec-rails'
-  gem 'cucumber-rails', '~> 1.4.1', :require => false
+  gem 'cucumber-rails', :require => false
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
 
