@@ -8,7 +8,7 @@
 Spree.config do |config|
   # Example:
   # Uncomment to override the default site name.
-  config.site_name = "Ecocity. De la granja a la ciudad"
+  #config.site_name = "Ecocity. De la granja a la ciudad"
 end
 
 Spree.user_class = "Spree::User"
@@ -17,8 +17,8 @@ Spree.user_class = "Spree::User"
 Spree::Config.set( logo: 'head_logo.jpg' )
 Spree::Config.set( admin_interface_logo: 'head_logo.jpg' )
 
-Spree::Config.set( default_meta_description: 'Ecocity' )
-Spree::Config.set( default_meta_keywords: 'Ecocity' )
+#Spree::Config.set( default_meta_description: 'Ecocity' )
+#Spree::Config.set( default_meta_keywords: 'Ecocity' )
 Spree::Config.set( logo: 'head_logo.jpg' )
 Spree::Config.set( currency: 'EUR' )
 Spree::Config.set( currency_symbol_position: 'after' )

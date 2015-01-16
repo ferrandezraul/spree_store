@@ -32,3 +32,28 @@ sudo apt-get install nodejs libqt5webkit5-dev
    Pero se puede utilizar otro gem adicional para ello
    https://github.com/azinazadi/spree-multilingual-static-content
    De momento tengo mis paginas staticas creadas por mi mismo
+
+
+//////////////////////////////  TIPS /////////////////////////////////////////////////////
+
+(Use sqlitebrowser to inspect development.sqlite3 database and create my db/seed.rb with i.e. first_or_create )
+Spree has several options for loading seed data,
+but perhaps the easiest to use here is to put ruby files in site/db/default/.
+These files are processed when rake db:seed is called, and will be processed in the order of the migration timestamps.
+
+Seguir con test:
+
+run with:
+    1. rake db:setup_new RAILS_ENV=test (my own task under lib/task)
+    2. cucumber
+    3. rspec
+
+1. Anyadir test para comprobar que: (Usar capybara or RSPEC or cucumber)
+
+    - logo sobre escrito
+    - Footer Power by sobre escrito
+
+//////////////////////////////  HELPERS /////////////////////////////////////////////////////
+
+rake db:setup_new
+rake db:setup_new RAILS_ENV=test
