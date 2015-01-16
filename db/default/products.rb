@@ -1,7 +1,7 @@
 load "#{Rails.root}/db/default/shipping_categories.rb"
 load "#{Rails.root}/db/default/tax_categories.rb"
 
-puts "Loading products ..."
+puts 'Loading products ...'
 
 catalan_translations = YAML.load_file("#{Rails.root}/config/locales/ca.yml")
 
