@@ -8,7 +8,7 @@ Then /^I should have (\d+) taxonomies$/ do | number |
   assert_equal number.to_i, number_taxonomies
 end
 
-When /^page is loaded/ do
+When /^page is loaded$/ do
   page.status_code.should be(200)
 end
 
