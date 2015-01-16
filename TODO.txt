@@ -26,6 +26,6 @@
    #Spree::Config.set( default_meta_description: 'Ecocity' )
    #Spree::Config.set( default_meta_keywords: 'Ecocity' )
 
-- Update to latest spree 2.4
+- Verify update to spree 2.4 is succesfull
 - Write cucumber scenario para comprobar que pedido minimo es 99 EUR
 - Set up Mailer
