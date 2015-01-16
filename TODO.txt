@@ -20,6 +20,11 @@
   +Cucumber::Rails::Database.javascript_strategy = :truncation
 
 
+- While updating to spree 2.3, see history gitg
+  In config/initializers/spree.rb I had to comment out:
+   #config.site_name = "Ecocity. De la granja a la ciudad"
+   #Spree::Config.set( default_meta_description: 'Ecocity' )
+   #Spree::Config.set( default_meta_keywords: 'Ecocity' )
 
 - Update to latest spree 2.4
 - Write cucumber scenario para comprobar que pedido minimo es 99 EUR
