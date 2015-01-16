@@ -63,7 +63,7 @@ group :test, :development do
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
 
-  gem 'capybara', branch: '2.2_stable'
+  gem 'capybara', branch: '2.4_stable'
 
   gem 'capybara-webkit'
 
