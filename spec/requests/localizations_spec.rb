@@ -1,14 +1,14 @@
 require 'spec_helper'
 
-describe "Localizations" do
-  describe "GET /localizations" do
-    it "changes locale to spanish", :driver => :webkit do
+describe 'Localizations' do
+  describe 'GET /localizations' do
+    it 'changes locale to spanish', :driver => :webkit do
       # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
       visit spree.root_path
 
-      page.should have_link( "Tenda" )
-      page.should have_link( "Cistella: (Buit)" )
-      page.should_not have_link( "Inicio" )
+      page.should have_link( 'Tenda' )
+      page.should have_link( 'Cistella: (Buit)' )
+      page.should_not have_link( 'Inicio' )
 
       page.status_code.should == 200
 
@@ -19,15 +19,15 @@ describe "Localizations" do
 
       page.status_code.should == 200
 
-      save_and_open_page
-      page.should have_link( "Tienda" )
-      page.should have_link( "Cesta: (Vacío)" )
-      page.should_not have_link( "Carret" )
+      #save_and_open_page
+      page.should have_link( 'Tienda' )
+      page.should have_link( 'Cesta: (Vacío)' )
+      page.should_not have_link( 'Carret' )
     end
   end
 
-  describe "GET Translataed taxonomies" do
-    it "changes taxonomies name when changing locale", :driver => :webkit do
+  describe 'GET Translataed taxonomies' do
+    it 'changes taxonomies name when changing locale', :driver => :webkit do
       # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
       visit spree.root_path
 

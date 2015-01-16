@@ -18,6 +18,7 @@
 
 # Ignore rubymine
 /*.idea
+/.idea/*
 
 # Ignore precompiled assets
 /public/assets/*
