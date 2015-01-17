@@ -384,7 +384,7 @@ DEPENDENCIES
   capybara-webkit
   capybara_minitest_spec
   coffee-rails (~> 4.0.0)
-  cucumber-rails
+  cucumber-rails (~> 1.4.1)
   database_cleaner
   debugger
   jbuilder (~> 1.2)

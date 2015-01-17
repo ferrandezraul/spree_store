@@ -8,12 +8,14 @@ Then /^I should have (\d+) taxonomies$/ do | number |
   puts number_taxonomies
   puts "#{Rails.env}"
 
+  must_equal 2, 2
+
   #save_and_open_page
-  assert_equal number.to_i, number_taxonomies
+  #assert_equal number.to_i, number_taxonomies
 end
 
 When /^page is loaded$/ do
-  page.status_code.should be(200)
+  expect(page.status_code).to eq(200)
 end
 
 And /^I should have (\d+) taxons$/ do | number |
