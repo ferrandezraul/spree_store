@@ -4,6 +4,8 @@
 # instead of editing this one. Cucumber will automatically load all features/**/*.rb
 # files.
 
+require 'spree'
+
 require 'cucumber/rails'
 
 require File.expand_path("../../../test/test_helper", __FILE__)
