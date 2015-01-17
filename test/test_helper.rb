@@ -2,6 +2,12 @@ ENV["RAILS_ENV"] ||= "test"
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 
+require 'capybara/rails'
+require 'capybara/cucumber'
+
+Capybara.javascript_driver = :webkit
+Capybara.current_driver = :webkit
+
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
 

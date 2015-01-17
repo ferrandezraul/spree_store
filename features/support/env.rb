@@ -4,34 +4,9 @@
 # instead of editing this one. Cucumber will automatically load all features/**/*.rb
 # files.
 
-ENV["RAILS_ENV"] = "test"
-require File.expand_path('../../../config/environment', __FILE__)
-
-require 'rails/test_help'
-
-require 'capybara'
-require 'capybara/dsl'
-require 'capybara/cucumber'
-
-require 'cucumber'
-require 'cucumber/formatter/unicode' # Comment out this line if you don't want Cucumber Unicode support
 require 'cucumber/rails'
-require 'cucumber/rails/rspec'
-require 'cucumber/rails/capybara'
 
-begin
-  require 'rspec/expectations'
-rescue
-  LoadError
-  require 'spec/expectations'
-end
-
-require 'rspec/rails'
-
-require 'spree'
-
-Capybara.javascript_driver = :webkit
-Capybara.current_driver = :webkit
+require File.expand_path("../../../test/test_helper", __FILE__)
 
 # Capybara defaults to CSS3 selectors rather than XPath.
 # If you'd prefer to use XPath, just uncomment this line and adjust any
@@ -81,5 +56,5 @@ end
 # Possible values are :truncation and :transaction
 # The :transaction strategy is faster, but might give you threading problems.
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
-Cucumber::Rails::Database.javascript_strategy = :transaction
+Cucumber::Rails::Database.javascript_strategy = :truncation
 

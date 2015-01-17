@@ -7,7 +7,7 @@ Then /^I should have (\d+) taxonomies$/ do | number |
   puts number
   puts number_taxonomies
 
-  #save_and_open_page
+  save_and_open_page
   assert_equal number.to_i, number_taxonomies
 end
 
