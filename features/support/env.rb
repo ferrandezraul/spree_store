@@ -8,6 +8,7 @@ require 'spree'
 
 require 'cucumber/rails'
 require 'cucumber/rails/rspec'
+require 'cucumber/rails/capybara'
 
 require File.expand_path("../../../test/test_helper", __FILE__)
 
