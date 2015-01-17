@@ -8,8 +8,6 @@ Then /^I should have (\d+) taxonomies$/ do | number |
   puts number_taxonomies
   puts "#{Rails.env}"
 
-  must_equal 2, 2
-
   #save_and_open_page
   #assert_equal number.to_i, number_taxonomies
 end
