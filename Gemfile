@@ -67,6 +67,8 @@ group :test, :development do
 
   gem 'capybara-webkit'
 
+  gem 'capybara_minitest_spec'
+
   # needed by capybara to show pages while running test
   gem 'launchy', '~> 2.4.2'
 end

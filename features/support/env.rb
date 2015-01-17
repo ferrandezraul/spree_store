@@ -4,19 +4,34 @@
 # instead of editing this one. Cucumber will automatically load all features/**/*.rb
 # files.
 
-require 'cucumber/rails'
+ENV["RAILS_ENV"] = "test"
+require File.expand_path('../../../config/environment', __FILE__)
+
+require 'rails/test_help'
 
 require 'capybara'
+require 'capybara/dsl'
 require 'capybara/cucumber'
 
+require 'cucumber'
+require 'cucumber/formatter/unicode' # Comment out this line if you don't want Cucumber Unicode support
+require 'cucumber/rails'
+require 'cucumber/rails/rspec'
+require 'cucumber/rails/capybara'
 
-require 'capybara/rails'
-require 'capybara/rspec'
-require 'capybara/webkit/matchers'
+begin
+  require 'rspec/expectations'
+rescue
+  LoadError
+  require 'spec/expectations'
+end
+
+require 'rspec/rails'
+
+require 'spree'
 
 Capybara.javascript_driver = :webkit
 Capybara.current_driver = :webkit
-Capybara.asset_host = "http://localhost:3000"
 
 # Capybara defaults to CSS3 selectors rather than XPath.
 # If you'd prefer to use XPath, just uncomment this line and adjust any
