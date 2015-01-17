@@ -54,6 +54,8 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
+  mount Spree::Core::Engine, :at => '/'
+
   Spree::Core::Engine.add_routes do
     get "/static_pages/qui_som"
     get "/static_pages/ecologico"

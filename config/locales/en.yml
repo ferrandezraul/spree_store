@@ -21,16 +21,16 @@
 
 en:
   taxonomies:
-  #Taxonomies de Spree definidas en mi db/default
+    #Taxonomies de Spree definidas en mi db/default
     categorias: Categories
     proveedor: Proveider
-    taxons:
-      xai: Carn de Xai
-      vedella: Carn de Vedella
-      porc: Carn de porc
-       ous_lactics: Ous i làctics
-       pa: Pà
-       sot-palau: Sot del Palau
-       mas-garet: Mas el Garet
-       fogaina: La Fogaina
-       mas-claperol: Mas Claperol
+    #taxons:
+    #  xai: Carn de Xai
+    #  vedella: Carn de Vedella
+    #  porc: Carn de porc
+    #   ous_lactics: Ous i làctics
+    #   pa: Pà
+    #   sot-palau: Sot del Palau
+    #   mas-garet: Mas el Garet
+    #   fogaina: La Fogaina
+    #   mas-claperol: Mas Claperol
