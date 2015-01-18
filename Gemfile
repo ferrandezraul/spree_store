@@ -48,6 +48,5 @@ group :development, :test do
   gem 'capybara'
 
   gem 'awesome_print'
+  gem 'dotenv-rails'
 end
-
-gem 'dotenv-rails', :groups => [:development, :test]

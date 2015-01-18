@@ -21,15 +21,33 @@ describe 'Home page', :type => :request, :js => true do
     end
   end
 
-  describe 'GET /products as json' do
-    it 'can go to products page', :driver => :webkit  do
-
-      #get '/products', :'Content-Type' => 'application/json'
-      #get spree.products_path, :format => 'json'
-      get spree.products_path
-
+  describe 'GET /' do
+    it 'can go and get products', :driver => :webkit  do
+      get '/products'
       #save_and_open_page
       expect(response).to be_success
+    end
+  end
+
+  describe 'REST API access' do
+    let!(:user)  { sign_in_as_admin! }
+
+    before do
+      user.generate_spree_api_key!
+    end
+
+    it 'can serve products as json' do
+      get '/api/variants', :token => user.spree_api_key
+      expect(response.status).to eq(200)
+    end
+
+
+    it 'can serve products as json', :driver => :webkit  do
+      #get spree.products_path, :format => 'json'
+      #get "/product/#{product.id}", :format => 'json'
+
+      get '/api/products', :token => user.spree_api_key
+      expect(response.status).to eq(200)
 
       ap 'response.class'
       ap response.class
@@ -38,7 +56,7 @@ describe 'Home page', :type => :request, :js => true do
 
       #json = JSON.parse(response.body.to_json)
 
-      ap 'json object returned by JSON.parse'
+      #ap 'json object returned by JSON.parse'
       #ap json
 
     end
