@@ -1,3 +1,6 @@
+require 'rails_helper'
+require 'spec_helper'
+
 # To make Capybara 'page' work (and to make Capybara interactions like click_button or fill_in work),
 # instead of retrieving with rspec's 'get', you need to retrieve with Capybara's 'visit':
 #
@@ -5,45 +8,17 @@
 # Capybara matchers: http://rubydoc.info/github/jnicklas/capybara/master/Capybara/Node/Matchers
 
 catalan_translations = YAML.load_file("#{Rails.root}/config/locales/ca.yml")
-spanish_translations = YAML.load_file("#{Rails.root}/config/locales/es.yml")
+#spanish_translations = YAML.load_file("#{Rails.root}/config/locales/es.yml")
 
+describe 'Home page', :type => :request, :js => true do
 
-require 'spec_helper'
-
-describe "Login", :js => true do
-
-  describe "Visit login page", :js => true do
-    it "can go to log in page and overwrites translation 'Validació' for 'Accedir com a client'", :driver => :webkit  do
-      visit spree.login_path
+  describe 'GET /' do
+    it 'can go to home page', :driver => :webkit  do
+      get spree.root_path
       #save_and_open_page
-      page.should have_selector("input[type='submit'][value='#{catalan_translations['ca']['spree']['login']}']")
-      #page.should have_selector("input[type='submit'][value='Login']")
+      expect(response).to be_success
     end
   end
-
-  #describe "GET /tasks" do
-  #  it "displays products" do
-  #    Task.create!(:name => "paint fence")
-  #    visit tasks_path
-  #    page.should have_content("paint fence")
-  #  end
-
-  #  it "supports js", :js => true do
-  #    visit tasks_path
-  #    click_link "test js"
-  #    page.should have_content("js works")
-  #  end
-
-  #describe "POST /tasks" do
-  #  it "creates task" do
-  #    visit tasks_path
-  #    fill_in "New Task", :with => "mow lawn"
-  #    click_button "Add"
-  #    # save_and_open_page
-  #    page.should have_content("Successfully added task.")
-  #    page.should have_content("mow lawn")
-  #  end
-  #end
 
 end
 
