@@ -46,6 +46,8 @@ gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '2-4-stable'
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'capybara'
+
+  gem 'awesome_print'
 end
 
 gem 'dotenv-rails', :groups => [:development, :test]
