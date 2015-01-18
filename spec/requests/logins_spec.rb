@@ -1,5 +1,6 @@
 require 'rails_helper'
 require 'spec_helper'
+#require 'ap'
 
 # To make Capybara 'page' work (and to make Capybara interactions like click_button or fill_in work),
 # instead of retrieving with rspec's 'get', you need to retrieve with Capybara's 'visit':
@@ -17,6 +18,11 @@ describe 'Home page', :type => :request, :js => true do
       get spree.root_path
       #save_and_open_page
       expect(response).to be_success
+
+      #json = JSON.parse(response.body)
+      #ap json
+
+
     end
   end
 
