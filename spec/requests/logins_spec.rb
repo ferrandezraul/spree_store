@@ -30,36 +30,37 @@ describe 'Home page', :type => :request, :js => true do
   end
 
   describe 'REST API access' do
-    let!(:user)  { sign_in_as_admin! }
+    let(:user) { Spree::LegacyUser.new }
 
-    before do
+    it "can generate an API key" do
+      expect(user).to receive(:save!)
       user.generate_spree_api_key!
+      expect(user.spree_api_key).not_to be_blank
     end
 
-    it 'can serve products as json' do
-      get '/api/variants', :token => user.spree_api_key
-      expect(response.status).to eq(200)
-    end
+    #it 'can serve products as json' do
+    #  get '/api/variants', :token => user.spree_api_key
+    #  expect(response.status).to eq(200)
+    #end
 
-
-    it 'can serve products as json', :driver => :webkit  do
+    #it 'can serve products as json', :driver => :webkit  do
       #get spree.products_path, :format => 'json'
       #get "/product/#{product.id}", :format => 'json'
 
-      get '/api/products', :token => user.spree_api_key
-      expect(response.status).to eq(200)
+    #  get '/api/products', :token => user.spree_api_key
+    #  expect(response.status).to eq(200)
 
-      ap 'response.class'
-      ap response.class
-      ap 'response.body.to_json'
-      ap response.body.to_json
+    #  ap 'response.class'
+    #  ap response.class
+    #  ap 'response.body.to_json'
+    #  ap response.body.to_json
 
       #json = JSON.parse(response.body.to_json)
 
       #ap 'json object returned by JSON.parse'
       #ap json
 
-    end
+    #end
   end
 
 end
