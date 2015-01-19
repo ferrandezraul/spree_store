@@ -21,7 +21,7 @@ describe 'Home page', :type => :request, :js => true do
     end
   end
 
-  describe 'GET /' do
+  describe 'GET /products' do
     it 'can go and get products', :driver => :webkit  do
       get '/products'
       #save_and_open_page
