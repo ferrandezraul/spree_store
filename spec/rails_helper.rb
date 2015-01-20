@@ -53,6 +53,12 @@ RSpec.configure do |config|
   config.extend Spree::Api::TestingSupport::Setup, :type => :controller
   config.include Spree::TestingSupport::Preferences, :type => :controller
 
+  #config.include Spree::Api::TestingSupport::Helpers
+  #config.extend Spree::Api::TestingSupport::Setup
+  #config.include Spree::TestingSupport::Preferences
+
+  #config.include FactoryGirl::Syntax::Methods
+
   config.fail_fast = ENV['FAIL_FAST'] || false
 
   config.before do
