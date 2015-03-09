@@ -1,5 +1,7 @@
 //////////////////////////////  TODO /////////////////////////////////////////////////////
 
+Finish http://railscasts.com/episodes/362-exporting-csv-and-excel. Create to_csv method in Product model
+
 Forget cucumber. Move cucumber test cases to rspec. First fix rspec
 Read test guides to fix cucmber problem with assert_equal --> comes from minitest gem??
 - Fix cucumber after update to spree 2.3 ( https://github.com/cucumber/cucumber-rails )
