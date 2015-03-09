@@ -69,4 +69,7 @@ group :test, :development do
 
   # needed by capybara to show pages while running test
   gem 'launchy', '~> 2.4.2'
+
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
