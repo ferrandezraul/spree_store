@@ -1,6 +1,8 @@
 //////////////////////////////  TODO /////////////////////////////////////////////////////
 
-Finish http://railscasts.com/episodes/362-exporting-csv-and-excel. Create to_csv method in Product model
+Finish http://railscasts.com/episodes/396-importing-csv-and-excel?view=asciicast. 
+Create Link to export products in csv in the admin panel. Continue con deface ...
+Create Link to import products in csv in the admin panel
 
 Forget cucumber. Move cucumber test cases to rspec. First fix rspec
 Read test guides to fix cucmber problem with assert_equal --> comes from minitest gem??
