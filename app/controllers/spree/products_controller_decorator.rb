@@ -11,7 +11,8 @@ Spree::ProductsController.class_eval do
     # http://railscasts.com/episodes/362-exporting-csv-and-excel
     respond_to do |format|
       format.html
-      format.csv { render text: "hola;que;tal" }
+      format.csv { send_data @products.to_csv }   # This creates a file that the browser downloads
+      #format.csv { render text: @products.to_csv } # This renders text
     end
 
   end
