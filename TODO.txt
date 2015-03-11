@@ -1,8 +1,9 @@
 //////////////////////////////  TODO /////////////////////////////////////////////////////
 
 Finish http://railscasts.com/episodes/396-importing-csv-and-excel?view=asciicast. 
-Create Link to export products in csv in the admin panel. Continue con deface ...
-Create Link to import products in csv in the admin panel
+Create more Links to export taxonomies, taxons, etc?
+Create Link to import products, and if it fails pop a warning and revert changes.
+See seed data to see which csv would I need? in csv in the admin panel. Continue con deface ...
 
 Forget cucumber. Move cucumber test cases to rspec. First fix rspec
 Read test guides to fix cucmber problem with assert_equal --> comes from minitest gem??
