@@ -1,9 +1,9 @@
 //////////////////////////////  TODO /////////////////////////////////////////////////////
 
 Finish http://railscasts.com/episodes/396-importing-csv-and-excel?view=asciicast. 
+When importing products throught the new link in admin panel, if it fails pop a warning and revert changes. Pending validation, ...
 Create more Links to export taxonomies, taxons, etc?
-Create Link to import products, and if it fails pop a warning and revert changes.
-See seed data to see which csv would I need? in csv in the admin panel. Continue con deface ...
+Seed data is inside db/default
 
 Forget cucumber. Move cucumber test cases to rspec. First fix rspec
 Read test guides to fix cucmber problem with assert_equal --> comes from minitest gem??

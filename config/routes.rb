@@ -61,5 +61,14 @@ Rails.application.routes.draw do
     get "/static_pages/ecologico"
     get "/static_pages/servicios"
     get "/static_pages/politica_privacidad"
+
+    # Add POST import_admin_products_path
+    namespace :admin do  
+      resources :products do
+        collection { post :import }
+      end
+    end
+
   end
+
 end
