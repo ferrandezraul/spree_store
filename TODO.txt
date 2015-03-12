@@ -3,6 +3,8 @@
 Finish http://railscasts.com/episodes/396-importing-csv-and-excel?view=asciicast. 
 When importing products throught the new link in admin panel, if it fails pop a warning and revert changes. Pending validation, ...
 Take a look at spree_sample
+
+Improve design of importing CSV( Use ActionView::Helpers form_tag, file_field_tag, etc ..)
 (/Users/raul/.rvm/gems/ruby-2.1.1@ecocity_spree_2_2_stable/bundler/gems/spree-6aa500c4cade/sample/db/samples/products.rb)
 Create more Links to export taxonomies, taxons, etc?
 Seed data is inside db/default
