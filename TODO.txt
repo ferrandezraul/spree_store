@@ -1,4 +1,8 @@
 //////////////////////////////  TODO /////////////////////////////////////////////////////
+Javascript does not work when i write it.
+Check Turbolinks.
+http://railscasts.com/episodes/390-turbolinks
+
 
 Finish http://railscasts.com/episodes/396-importing-csv-and-excel?view=asciicast. 
 When importing products throught the new link in admin panel, if it fails pop a warning and revert changes. Pending validation, ...
