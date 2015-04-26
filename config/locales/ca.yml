@@ -95,6 +95,7 @@ ca:
     login_name: Nom de usuari
     shipping_total: Despeses d'enviament
     items_cannot_be_shipped: Els productes seleccionats no es poden enviar a la teva adreça.
+    quick_search: Busca rapida
     i18n:
       # Overwrite from spree-i18n the language name displayed
       this_file_language: Català
