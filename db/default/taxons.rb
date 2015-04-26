@@ -88,7 +88,8 @@ taxons = [
     :spanish =>  (spanish_translations['es']['taxons']['fogaina']),
     :taxonomy => taxonomy_proveiders,
     :parent => taxonomy_proveiders.name,
-    :products => []
+    :products => [ products[:soca],
+                   products[:croscat] ]
   },
   {
     :name => "Mas Claperol",
