@@ -1,4 +1,8 @@
 //////////////////////////////  TODO ///////////////////////////////////////////////////// 
+Create a new rails spree app and see layout.
+See if by using bootstrap-sass it uses imports instead of requires
+https://github.com/twbs/bootstrap-sass
+
 Fix/test customizations with deface.
 Front end now works with bootstrap. Check bootstrap! 
 Fix UI with bootstrap. Current UI has no customizations.
