@@ -80,3 +80,5 @@ group :test, :development do
 end
 
 gem 'responders', '~> 2.0'
+
+gem 'bootstrap-sass', '~> 3.3.4'

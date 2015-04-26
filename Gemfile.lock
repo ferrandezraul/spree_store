@@ -431,6 +431,7 @@ DEPENDENCIES
   awesome_print (~> 1.2.0)
   better_errors
   binding_of_caller
+  bootstrap-sass (~> 3.3.4)
   capybara
   capybara-webkit
   coffee-rails (~> 4.0.0)
