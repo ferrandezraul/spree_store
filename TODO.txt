@@ -1,8 +1,10 @@
 //////////////////////////////  TODO ///////////////////////////////////////////////////// 
+Fix/test customizations with deface overwrittes.
+See https://github.com/spree/deface
+Use rake deface:test_selector[shared/_head,title]
+
 Spree uses bootstrap-sass
 https://github.com/twbs/bootstrap-sass
-
-Fix/test customizations with deface overwrittes.
 
 Check if now Javascript work when i write it. For example after adding buttons to export csv in admin panel
 Check Turbolinks.
