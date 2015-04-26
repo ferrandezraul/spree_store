@@ -26,7 +26,8 @@ products = [
     :available_on => Time.zone.now,
     :tax_category => reducido,
     :shipping_category => shipping_category,
-    :price => 3.50
+    :price => 3.50,
+    :cost_currency => "EUR"
   },
   {
     :name => "Soca",
@@ -34,7 +35,8 @@ products = [
     :available_on => Time.zone.now,
     :tax_category => reducido,
     :shipping_category => shipping_category,
-    :price => 4.00
+    :price => 4.00,
+    :cost_currency => "EUR"
   }
 ]
 

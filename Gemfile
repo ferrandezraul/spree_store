@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 4.1.8'
+gem 'rails', '~> 4.2.0'
 
 gem 'rails-i18n'
 
@@ -48,10 +48,10 @@ end
 # Use debugger
 gem 'debugger', group: [:development, :test]
 
-gem 'spree', :github => 'spree/spree', :branch => '2-4-stable'
-gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-4-stable'
-gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-4-stable'
-gem 'spree_i18n', github: 'spree/spree_i18n', :branch => '2-4-stable'
+gem 'spree', :github => 'spree/spree', :branch => '3-0-stable'
+gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '3-0-stable'
+gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '3-0-stable'
+gem 'spree_i18n', github: 'spree/spree_i18n', :branch => '3-0-stable'
 
 
 # Does not implement translations for pages
@@ -75,4 +75,8 @@ group :test, :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'
+
+  gem 'web-console', '~> 2.0'
 end
+
+gem 'responders', '~> 2.0'

@@ -1,7 +1,12 @@
 //////////////////////////////  TODO /////////////////////////////////////////////////////
+Fix bug, proveidor fogaina not link to soca? 
+Fix/test customizations with deface.
+Front end now works with bootstrap. Check bootstrap! 
+Fix UI with bootstrap. Current UI has no customizations.
 Javascript does not work when i write it.
 Check Turbolinks.
 http://railscasts.com/episodes/390-turbolinks
+Run test
 
 
 Finish http://railscasts.com/episodes/396-importing-csv-and-excel?view=asciicast. 

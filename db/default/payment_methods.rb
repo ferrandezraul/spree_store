@@ -49,7 +49,6 @@ Spree::PaymentMethod::Check.create!(
   {
     :name => (catalan_translations['ca']['payment_at_delivery']),
     :description => (catalan_translations['ca']['payment_at_delivery_description']),
-    :environment => "test",
     :active => true
   }
 )
@@ -58,7 +57,6 @@ Spree::PaymentMethod::Check.create!(
   {
       :name => (catalan_translations['ca']['payment_at_delivery']),
       :description => (catalan_translations['ca']['payment_at_delivery_description']),
-      :environment => "development",
       :active => true
   }
 )

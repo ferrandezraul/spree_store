@@ -105,11 +105,11 @@ taxons.each do |taxon|
 
   #Only create taxons that have a parent
   if taxon[:parent]
-    parent_taxon = Spree::Taxon.find_by_name!(taxon[:parent])
+    parent_taxon = Spree::Taxon::Translation::find_by_name!(taxon[:parent])
 
     sub_taxon = Spree::Taxon.create!(:name => taxon[:name],
                                      :parent_id => parent_taxon.id,
-                                     :taxonomy_id => parent_taxon.taxonomy_id,
+                                     #:taxonomy_id => parent_taxon.taxonomy_id,
                                      :products => taxon[:products])
 
     if taxon[:catalan] and taxon[:spanish]

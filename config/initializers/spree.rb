@@ -21,8 +21,8 @@ Spree::Config.set( admin_interface_logo: 'head_logo.jpg' )
 #Spree::Config.set( default_meta_keywords: 'Ecocity' )
 Spree::Config.set( logo: 'head_logo.jpg' )
 Spree::Config.set( currency: 'EUR' )
-Spree::Config.set( currency_symbol_position: 'after' )
-Spree::Config.set( currency_sign_before_symbol: false )
+#Spree::Config.set( currency_symbol_position: 'after' )
+#Spree::Config.set( currency_sign_before_symbol: false )
 Spree::Config.set( logo: 'head_logo.jpg' )
 
 
