@@ -1,12 +1,10 @@
 //////////////////////////////  TODO ///////////////////////////////////////////////////// 
-Create a new rails spree app and see layout.
-See if by using bootstrap-sass it uses imports instead of requires
+Spree uses bootstrap-sass
 https://github.com/twbs/bootstrap-sass
 
-Fix/test customizations with deface.
-Front end now works with bootstrap. Check bootstrap! 
-Fix UI with bootstrap. Current UI has no customizations.
-Javascript does not work when i write it.
+Fix/test customizations with deface overwrittes.
+
+Check if now Javascript work when i write it. For example after adding buttons to export csv in admin panel
 Check Turbolinks.
 http://railscasts.com/episodes/390-turbolinks
 Run test
@@ -39,13 +37,6 @@ Read test guides to fix cucmber problem with assert_equal --> comes from minites
   -Cucumber::Rails::Database.javascript_strategy = :transaction
   -
   +Cucumber::Rails::Database.javascript_strategy = :truncation
-
-
-- While updating to spree 2.3, see history gitg
-  In config/initializers/spree.rb I had to comment out:
-   #config.site_name = "Ecocity. De la granja a la ciudad"
-   #Spree::Config.set( default_meta_description: 'Ecocity' )
-   #Spree::Config.set( default_meta_keywords: 'Ecocity' )
 
 - Verify update to spree 2.4 is succesfull
 - Write cucumber scenario para comprobar que pedido minimo es 99 EUR
