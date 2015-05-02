@@ -8,11 +8,38 @@ spanish_translations = YAML.load_file('config/locales/es.yml')
 taxonomy_categories = Spree::Taxonomy.find_by_name!(catalan_translations['ca']['taxonomies']['categorias'])
 taxonomy_proveiders = Spree::Taxonomy.find_by_name!(catalan_translations['ca']['taxonomies']['proveedor'])
 
+# Watch out that name has to match with product names
+# cause Spree::Product.find_by_name! will be called afterwards
 products = {
   :soca => "Soca",
   :croscat => "Croscat",
+  :costella_talls => "Costella a talls",
+  :tall_per_rostir => "Tall per rostir",
+  :bistec => "Bistec",
+  :filet => "Filet",
+  :secret => "Secret",
+  :pedacet => "Pedacet",
+  :llom => "Llom",
+  :cap_de_llom => "Cap de llom",
+  :osos_espinada => "Ossos d'espinada",
+  :cua => "Cua",
+  :galtes => "Galtes",
+  :fetge => "Fetge",
+  :peu => "Peu",
+  :peu_cuit => "Peu cuit",
+  :llonzat => "Llonzat",
+  :cansalada => "Cansalada",
+  :carn_estofar => "Carn per estofar",
+  :panxeta => "Panxeta",
+  :botifarra => "Botifarra",
+  :salsitxa => "Salsitxa",
+  :carn_picada => "Carn picada",
+  :hamburguesa => "Hamburguesa",
+  :bull_ou_negre_blanc => "Bull d'ou, blanc, de fetge o negre",
+  :botifarra_ou_negre_blanca => "Botifarra d'ou, blanca, de fetge o negre",
+  :bull_cap => "Bull de cap",
+  :fuet => "Fuet"
 }
-
 
 products.each do |key, name|
   products[key] = Spree::Product.find_by_name!(name)
@@ -43,7 +70,32 @@ taxons = [
     :parent => taxonomy_categories.name,
     :catalan => (catalan_translations['ca']['taxons']['porc']),
     :spanish =>  (spanish_translations['es']['taxons']['porc']),
-    :products => []
+    :products => [ products[:costella_talls],
+                   products[:tall_per_rostir],
+                   products[:bistec],
+                   products[:filet],
+                   products[:secret],
+                   products[:pedacet],
+                   products[:llom],
+                   products[:cap_de_llom],
+                   products[:osos_espinada],
+                   products[:cua],
+                   products[:galtes],
+                   products[:fetge],
+                   products[:peu],
+                   products[:peu_cuit],
+                   products[:llonzat],
+                   products[:cansalada],
+                   products[:carn_estofar],
+                   products[:panxeta],
+                   products[:botifarra],
+                   products[:salsitxa],
+                   products[:carn_picada],
+                   products[:hamburguesa],
+                   products[:bull_ou_negre_blanc],
+                   products[:botifarra_ou_negre_blanca],
+                   products[:bull_cap],
+                   products[:fuet] ]
   },
   {
     :name => "Ous i làctics",
@@ -61,10 +113,7 @@ taxons = [
     :taxonomy => taxonomy_categories,
     :parent => taxonomy_categories.name,
     :position => 0,
-    :products => [
-      products[:soca],
-      products[:croscat]
-    ],
+    :products => []
   },
   {
     :name => "Sot del Palau",
@@ -100,7 +149,6 @@ taxons = [
     :products => []
   }
 ]
-
 
 taxons.each do |taxon|
 
