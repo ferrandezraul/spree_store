@@ -25,3 +25,8 @@
 
 # Ignore test report
 features_report.html
+
+# Ignore files produced by ctags and Guard-CTags-Bundler
+.tags
+.gemtags
+.tags_sorted_by_file
