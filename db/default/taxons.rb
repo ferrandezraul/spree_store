@@ -38,8 +38,25 @@ products = {
   :bull_ou_negre_blanc => "Bull d'ou, blanc, de fetge o negre",
   :botifarra_ou_negre_blanca => "Botifarra d'ou, blanca, de fetge o negre",
   :bull_cap => "Bull de cap",
-  :fuet => "Fuet"
+  :fuet => "Fuet",
+  :llonganissa => "Llonganissa",
+  :xoric => "Xoriç embotit",
+  :papaga_granel => "Papada a granel",
+  :espatlla_sense_pell => "Espatlla sense pell a granel",
+  :espatlla_amb_pell => "Espatlla amb pell a granel",
+  :retall_magre => "Retall magre 1ª a granel",
+  :retall_sense_triar => "Retall sense triar",
+  :costellar_sencer => "Costellar sencer",
+  :llom_canya_sencer => "Llom de canya sencer",
+  :cap_llom_sencer => "Cap de llom sencer",
+  :llonzat_senzer => "Llonzat sencer",
+  :lot_2_5 => "Lot 2.5 kg",
+  :lot_4 => "Lot 4 kg",
+  :lot_6 => "Lot 6 kg"
 }
+
+
+
 
 products.each do |key, name|
   products[key] = Spree::Product.find_by_name!(name)
@@ -95,7 +112,21 @@ taxons = [
                    products[:bull_ou_negre_blanc],
                    products[:botifarra_ou_negre_blanca],
                    products[:bull_cap],
-                   products[:fuet] ]
+                   products[:fuet],
+                   products[:llonganissa],
+                   products[:xoric],
+                   products[:papaga_granel],
+                   products[:espatlla_sense_pell],
+                   products[:espatlla_amb_pell],
+                   products[:retall_magre],
+                   products[:retall_sense_triar],
+                   products[:costellar_sencer],
+                   products[:llom_canya_sencer],
+                   products[:cap_llom_sencer],
+                   products[:llonzat_senzer],
+                   products[:lot_2_5],
+                   products[:lot_4],
+                   products[:lot_6] ]
   },
   {
     :name => "Ous i làctics",

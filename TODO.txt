@@ -1,7 +1,8 @@
 //////////////////////////////  TODO ///////////////////////////////////////////////////// 
-Fix/test customizations with deface overwrittes.
-See https://github.com/spree/deface
-Use rake deface:test_selector[shared/_head,title]
+Fix/test customizations with deface overwrittes on footer.
+  Use rake deface:test_selector[shared/_head,title]
+
+Set default image for taxons. Change view to list (too many porc products).
 
 Spree uses bootstrap-sass
 https://github.com/twbs/bootstrap-sass
