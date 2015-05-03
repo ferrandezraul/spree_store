@@ -1,5 +1,14 @@
 //////////////////////////////  TODO ///////////////////////////////////////////////////// 
-Fix/test customizations with deface overwrittes on footer.
+
+Set new attribute to Spree::User to indicate if it is a shop, coope or customer.
+Or add a new role (role is an array of strings?)
+  Decorators (with class_eval blocks) and migrations for existing models are a common way to extend and alter functionality.  If you are adding much more functionality than just a few tweaks here and there, you might consider creating one or more extensions for your code to live in. 
+
+  rails g spree:extension <extension_name>
+
+  This will make your code reusable.  It can help to have a look at existing extensions to see what techniques others are using.  Have a look at the official extensions to get an idea of what is acceptable among the rd guys.  
+
+Customize your footer with deface. See app/overwrides/footer.rb
   Use rake deface:test_selector[shared/_head,title]
 
 Set default image for taxons. Change view to list (too many porc products).
