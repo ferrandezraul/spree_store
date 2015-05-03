@@ -1,7 +1,6 @@
 //////////////////////////////  TODO ///////////////////////////////////////////////////// 
-
-Set new attribute to Spree::User to indicate if it is a shop, coope or customer.
-Or add a new role (role is an array of strings?)
+Crear una extension como en el tutorial que 
+anyada a Spree::User un attributo que indique si el usuarioes una shop, coope or customer.
   Decorators (with class_eval blocks) and migrations for existing models are a common way to extend and alter functionality.  If you are adding much more functionality than just a few tweaks here and there, you might consider creating one or more extensions for your code to live in. 
 
   rails g spree:extension <extension_name>
