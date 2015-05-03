@@ -26,3 +26,12 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+
+Before seeding, you should define following env vars in your system:
+
+:email => 	 ENV['HEROKU_STORE_EMAIL'],
+:login => 	 ENV['HEROKU_STORE_LOGIN'],
+:password => ENV['HEROKU_STORE_PASSWORD']
+
+If you plan to deply your app, set them on your hosting server as well. (i.e. with heroku, see setting env vars)
